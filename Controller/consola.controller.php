@@ -6,11 +6,11 @@ $accion=$_REQUEST["action"];
  switch ($accion) {
  	case 'guardarconsola':
  		 
- 		 $usu_nombre=$_POST["txtCodigo"];
- 		 $usu_apellido=$_POST["txtName"];
+ 		 $cod_consola=$_POST["txtCodigo"];
+ 		 $cod_nombre=$_POST["txtName"];
 
  		 try {
- 		 	Gestion_Consola::Guardar($usu_nombre,$usu_apellido);
+ 		 	Gestion_Consola::Guardar($cod_consola,$cod_nombre);
  		 	echo "Guardar con exito";
  		 } catch (Exception $e) {
  		 	echo $e;
