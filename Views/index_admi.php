@@ -7,5 +7,6 @@
 </head>
 <body>
 <?php include("header_admi.php");?>
+<?php include("admin_usuario.php");?>
 </body>
 </html>
