@@ -43,12 +43,17 @@ header{
 	width: 100%;
 	height: 445px;
 	background: url(../imagen/fondo.png);
+	overflow: hidden;
+
 }
 
 #dvPhoto{
 	width: 150px;
 	height: 150px;
+	margin-top: 50px;
+	margin-left: 100px;
 	border: groove 1px;
 	border-radius: 10px;
 	box-shadow: 4px 2px 2px #000;
+	overflow: hidden;
 }
