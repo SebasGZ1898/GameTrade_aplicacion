@@ -1,0 +1,19 @@
+
+header{
+	background: #212121;
+	height: 100px;
+	width: 100%;
+}
+
+#dvLogo{
+	background: url(../imagen/logo.png);
+	width: 453px;
+	height: 98px;
+	display: inline-block;
+}
+
+#logn{
+	display: inline-block;
+	float: right;
+}
+
