@@ -7,6 +7,11 @@
 </head>
 <body>
 <?php include("header_admi.php");?>
-<?php include("admin_usuario.php");?>
+
+<section id="stMain">
+	<div>d</div>
+	<div>f</div>
+	<div>g</div>
+</section>
 </body>
 </html>

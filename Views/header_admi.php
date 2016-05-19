@@ -2,7 +2,7 @@
 	<div id="dvLogo">aaaa</div>
 	<div id="logn">Cerrar session</div>
 </header>
-<ul>
+<ul id="ulMain">
 	<li>Usuario</li>
 	<li>Juegos</li>
 	<li>Consolas</li>
