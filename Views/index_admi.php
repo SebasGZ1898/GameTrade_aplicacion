@@ -9,9 +9,12 @@
 <?php include("header_admi.php");?>
 
 <section id="stMain">
-	<div id="dvPhoto">d</div>
+	<div id="dvPhoto"></div>
 	<div id="dvWelcome">BIENVENIDO</div>
-	<div id="dvAdm">ADMINISTRADOR</div>
+	<div id="dvAdm">Sebastian</div>
+</section>
+<section>
+	
 </section>
 </body>
 </html>
