@@ -76,3 +76,10 @@ header{
 	color: #fff;
 	margin-top: 20px;	
 }
+
+[id^="stA_"] {
+	width: 1333px;
+	height: 500px;
+	background: #f00;
+	display: none;
+}

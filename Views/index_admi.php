@@ -13,8 +13,37 @@
 	<div id="dvWelcome">BIENVENIDO</div>
 	<div id="dvAdm">Sebastian</div>
 </section>
-<section>
-	
+<section id="stA_User">
+
 </section>
+
+<section id="stA_Game">
+
+</section>
+<section id="stA_Consola">
+
+</section>
+<section id="stA_Categoria">
+
+</section>
+<section id="stA_Puntos">
+
+</section>
+<section id="stA_Bono">
+
+</section>
+<section id="stA_Encuesta">
+
+</section>
+<section id="stA_Sancion">
+
+</section>
+<section id="stA_Puntosjue">
+
+</section>
+<section id="stA_Inform">
+
+</section>
+
 </body>
 </html>
