@@ -19,7 +19,7 @@
     <textarea name="Descripcion" rows="5" cols="30"></textarea>
     </br></br>
     <label>Estado:</label>
-
+    </br>
     <!--Este es un "select", es un dropdown list. Para seleccionar el estado del usuario:-->
     <select name="Estado_slct">
       <option value="Activo">Activo</option>
