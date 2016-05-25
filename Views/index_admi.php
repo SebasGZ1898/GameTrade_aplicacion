@@ -32,7 +32,7 @@ categorias
 puntos
 </section>
 <section id="stA_Bono">
-bono
+	<?php require("bono.php"); ?>
 </section>
 <section id="stA_Encuesta">
 encuesta
