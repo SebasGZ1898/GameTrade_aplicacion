@@ -1,5 +1,5 @@
 #art_left_admin{
-	
+
 	vertical-align: top;
 	display: inline-block;
 
@@ -31,4 +31,11 @@ h1{
 
   text-align: center;
   padding-top: 25px;
+}
+
+/*se le da forma el formulario de bonos*/
+.formulario{
+  margin: auto;
+  padding: auto;
+  width: 200px;
 }
