@@ -41,6 +41,7 @@ h1{
   width: 200px;
 }
 
+<<<<<<< HEAD
 .titulo_bono{
 	background-color:black;
 	width: 800px;
@@ -48,3 +49,17 @@ h1{
 	margin-left: 250px;
 	color: white;
 }
+=======
+#Cat{
+	text-align: center;
+	padding-top: 25px;
+	
+}
+
+Categoria{
+	margin: auto;
+  	padding: auto;
+  	width: 200px;
+	
+}
+>>>>>>> origin/master
