@@ -1,6 +1,6 @@
 <?php
 require_once("../Model/conexion.php");
-require_once("consola.class.php");
+require_once("../Model/consola.class.php");
 
 $accion=$_REQUEST["action"];
  switch ($accion) {

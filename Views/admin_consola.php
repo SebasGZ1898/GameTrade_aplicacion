@@ -6,7 +6,7 @@
 
 	<article id="admin_consola">
 
-		<form action="usuarios.controller.php" method="post">
+		<form action="../Controller/consola.controller.php" method="post">
 
 		<label for="txtCodigo">codigo  </label><input type="text" name="txtCodigo"/> <br><br>
 
