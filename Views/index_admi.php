@@ -21,11 +21,28 @@ usuario
 </section>
 
 <section id="stA_Game">
-juego
+	<article>
+		
+	</article>
+	<article>
+		<h2>Juegos</h2>
+		<div>
+			<ul>
+				<li>Nuevo</li>
+				<li>Modificar</li>
+				<li>Guardar</li>
+				<li>Cancelar</li>
+			</ul>
+			<fieldset>
+				<legend>Agregar</legend>
+				<label>Juego codigo</label>
+			</fieldset>
+		</div>
+	</article>
 </section>
 <section id="stA_Bono">
 	<?php require("bono.php"); ?>
-</section>
+</section> 
 <section id="stA_Consola">
 	<?php require("admin_consola.php"); ?>
 </section>
