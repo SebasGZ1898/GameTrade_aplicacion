@@ -13,7 +13,7 @@
     <input type="text" name="cat_fech_txt">
     </br></br>
     <label>Descripcion:</label>
-
+    <br></br>
     <!--Esto es un campo de texto largo, en donde se ingresa la descripción:-->
 
     <textarea name="Descripcion" rows="5" cols="30"></textarea>
