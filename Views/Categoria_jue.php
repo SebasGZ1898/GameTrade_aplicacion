@@ -1,7 +1,7 @@
 <!--Esto es el formulario de la categoría del juego-->
 
 <div class="Categoria">
-  <form class="categoria_frm" action="categoria.controller" method="post">
+  <form class="categoria_frm" action="../Controller/categoria.controller.php" method="post">
     <h1 id="Cat">Categor&iacute;a del juego</h1>
     <label>Ingresa código:</label>
     <input type="text" name="cat_cod_txt">
@@ -19,7 +19,7 @@
     <textarea name="Descripcion" rows="5" cols="30"></textarea>
     </br></br>
     <label>Estado:</label>
-    </br>
+  </br></br>
     <!--Este es un "select", es un dropdown list. Para seleccionar el estado del usuario:-->
     <select name="Estado_slct">
       <option value="Activo">Activo</option>
@@ -29,7 +29,7 @@
   </br></br>
 
     <!--Esto es el botón para guardar los datos de la categoría del juego:-->
-    <input type="button" name="Guardar_btn" value="Guardar">
+    <button name="action" value="Guardar_btn">Guardar</button>
   </form>
 
 </div>

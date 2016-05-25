@@ -1,10 +1,10 @@
 <?php
 require_once("../Model/conexion.php");
-require_once("Categoria.class.php");
+require_once("../Model/Categoria.class.php");
 
 $accion=$_REQUEST["action"];
 switch ($accion) {
-  case 'GuardarCategoria':
+  case 'Guardar_btn':
 
 //en esta parte se guardan los datos en la variable GuardarCategoria que esta encima
   $cat_cod=$_POST["cat_cod_txt"];
