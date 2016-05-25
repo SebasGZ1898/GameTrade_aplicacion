@@ -3,14 +3,14 @@
 	<div id="logn">Cerrar session</div>
 </header>
 <ul id="ulMain">
-	<li>Usuario</li>
-	<li>Juegos</li>
-	<li>Consolas</li>
-	<li>Categorias</li>
-	<li>Puntos</li>
-	<li>Bono</li>
-	<li>Encuestas</li>
-	<li>Sancion</li>
-	<li>Puntos-x-juego</li>
-	<li>Informes</li>
+	<li onclick="sbMenu('Usuario')">Usuario</li>
+	<li onclick="sbMenu('jueos')">Juegos</li>
+	<li onclick="sbMenu('consola')">Consolas</li>
+	<li onclick="sbMenu('categoria')">Categorias</li>
+	<li onclick="sbMenu('punto')">Puntos</li>
+	<li onclick="sbMenu('bono')">Bono</li>
+	<li onclick="sbMenu('encuesta')">Encuestas</li>
+	<li onclick="sbMenu('sancion')">Sancion</li>
+	<li onclick="sbMenu('punt_juego')">Puntos-x-juego</li>
+	<li onclick="sbMenu('informe')">Informes</li>
 </ul>
