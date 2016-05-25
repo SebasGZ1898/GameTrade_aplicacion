@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
+
 <div id="cuadro">
 <h1 style="color: white">CONSOLA</h1>
 </div>

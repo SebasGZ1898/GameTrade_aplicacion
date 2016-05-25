@@ -4,6 +4,7 @@
 	<title>Administrador</title>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/gstyle_admi.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/gmindex_admi.js"></script>
 </head>
 <body>
@@ -22,7 +23,7 @@ usuario
 juego
 </section>
 <section id="stA_Consola">
-consoola
+	<?php require("admin_consola.php"); ?>
 </section>
 <section id="stA_Categoria">
 categorias
