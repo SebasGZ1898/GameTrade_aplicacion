@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Administrador</title>
+	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/gstyle_admi.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -22,6 +23,9 @@ usuario
 <section id="stA_Game">
 juego
 </section>
+<section id="stA_Bono">
+	<?php require("bono.php"); ?>
+</section>
 <section id="stA_Consola">
 	<?php require("admin_consola.php"); ?>
 </section>
@@ -31,9 +35,7 @@ categorias
 <section id="stA_Puntos">
 puntos
 </section>
-<section id="stA_Bono">
-	<?php require("bono.php"); ?>
-</section>
+
 <section id="stA_Encuesta">
 encuesta
 </section>
