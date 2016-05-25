@@ -4,7 +4,7 @@
 </header>
 <ul id="ulMain">
 	<li onclick="sbMenu('Usuario')">Usuario</li>
-	<li onclick="sbMenu('jueos')">Juegos</li>
+	<li onclick="sbMenu('juegos')">Juegos</li>
 	<li onclick="sbMenu('consola')">Consolas</li>
 	<li onclick="sbMenu('categoria')">Categorias</li>
 	<li onclick="sbMenu('punto')">Puntos</li>
