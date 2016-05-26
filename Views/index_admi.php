@@ -58,17 +58,18 @@ usuario
 		</div>
 	</article>
 </section>
+<section id="stA_Puntos">
+<?php require("puntos.php"); ?>
+</section>
 <section id="stA_Bono">
 	<?php require("bono.php"); ?>
 </section> 
 <section id="stA_Consola">
 	<?php require("admin_consola.php"); ?>
 </section>
+
 <section id="stA_Categoria">
 <?php require("Categoria_jue.php"); ?>
-</section>
-<section id="stA_Puntos">
-<?php require("puntos.php"); ?>
 </section>
 
 <section id="stA_Encuesta">
