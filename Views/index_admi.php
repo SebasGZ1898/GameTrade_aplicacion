@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/gmindex_admi.js"></script>
+	<script type="text/javascript" src="js/gmindex_admi.js"></script>
 </head>
 <body>
 <?php include("header_admi.php");?>
@@ -22,8 +23,8 @@ usuario
 
 <section id="stA_Game">
 	<article id="artLeftjuego">
-		<div>
-			<input id="txtSeach" type="text"/>
+		<div id="dvSeach">
+			<input id="txtSeach" placeholder="Buscar juego" type="text"/>
 			<div id="logSeach"></div>
 		</div>
 		<select id="cbCargajue" size="25"></select>
@@ -40,17 +41,17 @@ usuario
 			<fieldset>
 				<legend>Agregar</legend>
 					<ul id="ulAjuego">
-					<li><label>Juego codigo</label><input type="text" /></li>
-					<li><label>Codigo Consola</label><input type="text" /></li>
-					<li><label>Codigo Categoria</label><input type="text" /></li>
-					<li><label>Nombre Videojuego</label><input type="text" /></li>
-					<li><label>Descripcion </label><input type="text" /></li>
-					<li><label>Cantidad</label><input type="text" /></li>
-					<li><label>Imagen </label><input type="text" /></li>
-					<li><label>Trailer</label><input type="text" /></li>
-					<li><label>Estado</label><input type="text" /></li>
-					<li><label>Fecha publicidad</label><input type="text" /></li>
-					<li><label>Palabras claves</label><input type="text" /></li>
+					<li><label>Juego codigo</label><input type="text" disabled="disabled" /></li>
+					<li><label>Codigo Consola</label><input type="text" disabled="disabled" /></li>
+					<li><label>Codigo Categoria</label><input type="text" disabled="disabled" /></li>
+					<li><label>Nombre Videojuego</label><input type="text" disabled="disabled" /></li>
+					<li><label>Descripcion </label><input type="text" disabled="disabled" /></li>
+					<li><label>Cantidad</label><input type="text" disabled="disabled" /></li>
+					<li><label>Imagen </label><input type="text" disabled="disabled" /></li>
+					<li><label>Trailer</label><input type="text" disabled="disabled" /></li>
+					<li><label>Estado</label><input type="text" disabled="disabled" /></li>
+					<li><label>Fecha publicidad</label><input type="text" disabled="disabled" /></li>
+					<li><label>Palabras claves</label><input type="text" disabled="disabled" /></li>
 					</ul>
 			</fieldset>	
 			
@@ -67,7 +68,7 @@ usuario
 <?php require("Categoria_jue.php"); ?>
 </section>
 <section id="stA_Puntos">
-puntos
+<?php require("puntos.php"); ?>
 </section>
 
 <section id="stA_Encuesta">
