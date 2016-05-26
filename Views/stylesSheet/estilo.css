@@ -43,6 +43,7 @@ h1{
 
   text-align: center;
   padding-top: 25px;
+  color: red;
 }
 
 /*se le da forma el formulario de bonos*/
@@ -73,12 +74,25 @@ h1{
 
 .Categoria{
 	margin: auto;
-  padding: auto;
-  width: 200px;
+  	padding: auto;
+  	width: 200px;
+}
+
+/*Estilos para puntos:*/
+
+.titulo_puntos{
+	background-color:black;
+	width: 800px;
+	height: 100px;
+	margin-left: 250px;
+	color: white;
+}
+
+.formulario_pto{
+	margin: auto;
+  	padding: auto;
+  	width: 200px;
 }
 >>>>>>> origin/master
 
-.titulo_puntos{
-	background-color: red;
 
-}

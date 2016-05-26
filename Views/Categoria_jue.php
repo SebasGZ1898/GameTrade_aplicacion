@@ -25,6 +25,7 @@
   </br></br>
     <!--Este es un "select", es un dropdown list. Para seleccionar el estado del usuario:-->
     <select name="Estado_slct">
+      <option value="Activo"></option>
       <option value="Activo">Activo</option>
       <option value="Inactivo">Inactivo</option>
     </select>

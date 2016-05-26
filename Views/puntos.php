@@ -2,7 +2,7 @@
 <div class="titulo_puntos">
 	<h1>Puntos</h1>
 </div>
-
+</br>
 <!--<script>
 	function ValidarDatosPOST(){
 		var verificar= true;
@@ -28,7 +28,7 @@
 		<input type="text" name="pto_moneda_txt" />
 		</br></br>
 		<label>Descripción:</label>
-		</br></br>
+		</br>
 
 		<!--Textarea para la descripción:-->
 		<textarea name="Descripcion_pto" rows="5" cols="25"></textarea>
