@@ -11,7 +11,7 @@ $accion=$_REQUEST["action"];
  		 $ciu_departamento=$_POST["txtCodigo"];
  		
  		 try {
- 		 	Gestion_Consola::Guardar($ciu_codigo,$ciu_nombre,$ciu_departamento);
+ 		 	Gestion_Ciudad::Guardar($ciu_codigo,$ciu_nombre,$ciu_departamento);
  		 	echo "Guardar con exito";
  		 } catch (Exception $e) {
  		 	echo $e;

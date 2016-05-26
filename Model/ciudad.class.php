@@ -8,7 +8,7 @@ class Gestion_Ciudad
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "INSERT INTO tbl_consola (ciu_cod,ciu_nom,depar_cod) values (?,?,?)";
+		$sql= "INSERT INTO tbl_ciudad (ciu_cod,ciu_nom,depar_cod) values (?,?,?)";
 
 		$query= $pdo->prepare($sql);
 		$query->execute(array($ciu_codigo,$ciu_nombre,$ciu_departamento));
