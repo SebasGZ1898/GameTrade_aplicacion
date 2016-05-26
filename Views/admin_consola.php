@@ -14,6 +14,10 @@
 
 		<label for="txtReferencia">referencia  </label><input type="text" name="txtReferencia" /><br><br>
 
+		<label for="txtEstado">estado </label><input type="text" name="txtEstado" /><br><br>
+
+		<label for="txtImagen">imagen </label><input type="text" name="txtImagen" /><br><br>
+
 		<button name="action" value="guardarconsola">enviar</button>
 
 	</article>
