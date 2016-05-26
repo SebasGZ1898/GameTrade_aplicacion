@@ -1,3 +1,12 @@
+<link rel="stylesheet" type="text/css" href="../stylesSheet/estilo.css">
+<?php
+
+require_once("../model/conexion.php");
+require_once("../model/ciudad.class.php");
+
+$ciudad = Gestion_Ciudad::cargardepartamento();
+
+?>
 
 <div id="cuadrado">
 <h1 style="color:black">CIUDAD</h1>
@@ -9,16 +18,7 @@
 
 
 
-		<label for="txtCiudad">Codigo ciudad</label>
-
-
-		<select name="txtCiudad">
-			<option>4823</option>
-			<option>5978</option>
-		</select>
-
-		<br><br>
-
+		<label for="txtCiudad">codigo de la ciudad </label><input type="text" name="txtCiudad" /><br><br>
 
 		
 
@@ -27,12 +27,16 @@
 		    
              
 
-		<label for="txtCodigo">Codigo departamento</label>
+		<label for="txtCodigo">Nombre departamento</label>
 
 
 		<select name="txtCodigo">
-			<option>4823</option>
-			<option>5978</option>
+		<option>Seleccionar</option>
+		<?php
+		foreach ($ciudad as $ciu ) {
+			echo "<option value=".$ciu["depar_cod"].">".$ciu["depar_nom"]."</option>";
+		}
+		?>
 		</select>
 
 		<br><br>

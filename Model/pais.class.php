@@ -1,30 +1,31 @@
 <?php
 
 
-class Gestion_Ciudad
+class Gestion_Pais
 {
 	
-	function guardar($ciu_codigo,$ciu_nombre,$ciu_departamento){
+	function guardar($cod_pais,$nom_pais){
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "INSERT INTO tbl_ciudad (ciu_cod,ciu_nom,depar_cod) values (?,?,?)";
+		$sql= "INSERT INTO tbl_pais (pais_cod,pais_nom) values (?,?)";
 
 		$query= $pdo->prepare($sql);
-		$query->execute(array($ciu_codigo,$ciu_nombre,$ciu_departamento));
+		$query->execute(array($cod_pais,$nom_pais));
 
 		ConexionBD::DesconectarBD();
 
 	}
 
-    function cargardepartamento(){
+    function cargarpais(){
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "SELECT * FROM tbl_departamento";
+		$sql= "SELECT * FROM tbl_pais";
 
 		$query= $pdo->prepare($sql);
 		$query->execute();
+		
 		$result = $query ->fetchALL(PDO::FETCH_BOTH);
 
 		ConexionBD::DesconectarBD();
