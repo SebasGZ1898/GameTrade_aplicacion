@@ -21,13 +21,17 @@ usuario
 </section>
 
 <section id="stA_Game">
-	<article>
-		
-	</article>
-	<article>
-		<h2>Juegos</h2>
+	<article id="artLeftjuego">
 		<div>
-			<ul>
+			<input id="txtSeach" type="text"/>
+			<div id="logSeach"></div>
+		</div>
+		<select id="cbCargajue" size="25"></select>
+	</article>
+	<article id="artCenterjuego">
+		<h2>Juegos</h2>
+		<div id="dvCont">
+			<ul id="ulMenujuego">
 				<li>Nuevo</li>
 				<li>Modificar</li>
 				<li>Guardar</li>
@@ -35,8 +39,21 @@ usuario
 			</ul>
 			<fieldset>
 				<legend>Agregar</legend>
-				<label>Juego codigo</label>
-			</fieldset>
+					<ul id="ulAjuego">
+					<li><label>Juego codigo</label><input type="text" /></li>
+					<li><label>Codigo Consola</label><input type="text" /></li>
+					<li><label>Codigo Categoria</label><input type="text" /></li>
+					<li><label>Nombre Videojuego</label><input type="text" /></li>
+					<li><label>Descripcion </label><input type="text" /></li>
+					<li><label>Cantidad</label><input type="text" /></li>
+					<li><label>Imagen </label><input type="text" /></li>
+					<li><label>Trailer</label><input type="text" /></li>
+					<li><label>Estado</label><input type="text" /></li>
+					<li><label>Fecha publicidad</label><input type="text" /></li>
+					<li><label>Palabras claves</label><input type="text" /></li>
+					</ul>
+			</fieldset>	
+			
 		</div>
 	</article>
 </section>
@@ -47,7 +64,7 @@ usuario
 	<?php require("admin_consola.php"); ?>
 </section>
 <section id="stA_Categoria">
-categorias
+<?php require("Categoria_jue.php"); ?>
 </section>
 <section id="stA_Puntos">
 puntos
