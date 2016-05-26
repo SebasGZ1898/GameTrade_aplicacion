@@ -1,16 +1,19 @@
 <!--Esto es el formulario de la categoría del juego-->
 
+<div class="Titulo_Cat">
+  <h1>Categor&iacute;a del juego</h1>
+</div>
+
 <div class="Categoria">
   <form class="categoria_frm" action="../Controller/categoria.controller.php" method="post">
-    <h1 id="Cat">Categor&iacute;a del juego</h1>
     <label>Ingresa código:</label>
-    <input type="text" name="cat_cod_txt">
+    <input type="text" name="cat_cod_txt"/>
     </br></br>
     <label>Nombre:</label>
-    <input type="text" name="cat_nom_txt">
+    <input type="text" name="cat_nom_txt"/>
     </br></br>
     <label>Fecha:</label>
-    <input type="text" name="cat_fech_txt">
+    <input type="text" name="cat_fech_txt"/>
     </br></br>
     <label>Descripcion:</label>
     <br></br>

@@ -61,16 +61,24 @@ h1{
 }
 /*aqui termina bono*/
 
-#Cat{
-	text-align: center;
-	padding-top: 25px;
+/*Estilos para categoría juego:*/
 
+.Titulo_Cat{
+	background-color:black;
+	width: 800px;
+	height: 100px;
+	margin-left: 250px;
+	color: white;
 }
 
-Categoria{
+.Categoria{
 	margin: auto;
-  	padding: auto;
-  	width: 200px;
-
+  padding: auto;
+  width: 200px;
 }
 >>>>>>> origin/master
+
+.titulo_puntos{
+	background-color: red;
+
+}

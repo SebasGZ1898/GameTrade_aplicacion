@@ -1,5 +1,5 @@
 <?php
-//aqui se hace la conecion entre la parte que recoge los datos y la base de datos
+//aqui se hace la conexion entre la parte que recoge los datos y la base de datos
 require_once("../Model/conexion.php");
 require_once("../Model/bono.class.php");
 
