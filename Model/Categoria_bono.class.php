@@ -1,24 +1,24 @@
 <!--aqui recojemos los datos y los llevamos a la base de datos-->
 <?php
-class bono{
-  function guardar($bono_cod,$cat_bono_cod,$pto_cod,$bono_desc,$bono_cant){
-    $pdo = ConexionBD::AbrirBD();
+class categoria_bono{
+  function guardar($cat_bono_nom,$cat_bono_fech){
+    $pdo= ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="INSERT INTO tb_bono(bono_cod,cat_bono_cod,pto_cod,bono_desc,bono_cant) values(?,?,?,?,?)";
+    $sql="INSERT INTO tbl_categoria_bono(cat_bono_nom,cat_bono_fech) values (?,?)";
 
     $query= $pdo->prepare($sql);
-    $query->execute(array($bono_cod,$cat_bono_cod,$pto_cod,$bono_desc,$bono_cant));
+    $query->execute(array($cat_bono_nom,$cat_bono_fech));
 
     ConexionBD::DesconectarBD();
 
   }
 
-  function mostrar_bono(){
-    $pdo = ConexionBD::AbrirBD();
+  function mostrar_categoria_bono(){
+    $pdo= ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="select * from tb_bono";
+    $sql="select * from tbl_categoria_bono";
 
     $query= $pdo->prepare($sql);
     $query->execute();
@@ -28,9 +28,6 @@ class bono{
     ConexionBD::DesconectarBD();
 
     return $result;
-
   }
-
 }
-
-  ?>
+ ?>
