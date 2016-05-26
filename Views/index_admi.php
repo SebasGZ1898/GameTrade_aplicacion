@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/gmindex_admi.js"></script>
-	<script type="text/javascript" src="js/gmindex_admi.js"></script>
+	<script type="text/javascript" src="js/juego_admi.js"></script>
 </head>
 <body>
 <?php include("header_admi.php");?>
@@ -33,10 +33,10 @@ usuario
 		<h2>Juegos</h2>
 		<div id="dvCont">
 			<ul id="ulMenujuego">
-				<li>Nuevo</li>
-				<li>Modificar</li>
-				<li>Guardar</li>
-				<li>Cancelar</li>
+				<li onclick="sbJueAdmi('1')">Nuevo</li>
+				<li onclick="sbJueAdmi('2')">Modificar</li>
+				<li onclick="sbJueAdmi('3')">Guardar</li>
+				<li onclick="sbJueAdmi('4')">Cancelar</li>
 			</ul>
 			<fieldset>
 				<legend>Agregar</legend>
@@ -58,29 +58,37 @@ usuario
 		</div>
 	</article>
 </section>
-<section id="stA_Puntos">
-<?php require("puntos.php"); ?>
-</section>
-<section id="stA_Bono">
-	<?php require("bono.php"); ?>
-</section> 
-<section id="stA_Consola">
-	<?php require("admin_consola.php"); ?>
-</section>
 
 <section id="stA_Categoria">
 <?php require("Categoria_jue.php"); ?>
 </section>
 
+
+<section id="stA_Puntos">
+<?php require("puntos.php"); ?>
+</section>
+
+<section id="stA_Bono">
+	<?php require("bono.php"); ?>
+</section> 
+
+<section id="stA_Consola">
+	<?php require("admin_consola.php"); ?>
+</section>
+
+
 <section id="stA_Encuesta">
 encuesta
 </section>
+
 <section id="stA_Sancion">
 sancion
 </section>
+
 <section id="stA_Puntosjue">
 puntosjue
 </section>
+
 <section id="stA_Inform">
 <h2>Todavia no se han creado los informes</h2>
 </section>
