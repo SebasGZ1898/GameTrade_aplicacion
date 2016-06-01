@@ -4,6 +4,7 @@ include("../Model/juego_admi.class.php");
 
 $Mconsol=Gestion_Videojuego::mostrarConsol();
 $Mcategoria=Gestion_Videojuego::mostrarCategoria();
+$Mjuego=Gestion_Videojuego::mostrarjuego();
 
 ?>
 
@@ -37,7 +38,16 @@ usuario
 			<input id="txtSeach" placeholder="Buscar juego" type="text"/>
 			<div id="logSeach"></div>
 		</div>
-		<select id="cbCargajue" size="25"></select>
+		<select id="cbCargajue" size="25">
+			<?php
+
+				foreach ($Mjuego as $juego) {
+					echo "<option value=".$juego["jue_cod"].">".$juego["jue_nom"]."</option>";
+				}
+
+			?>
+
+		</select>
 	</article>
 	<article id="artCenterjuego">
 		<h2>Juegos</h2>
