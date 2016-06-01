@@ -13,7 +13,7 @@ class bono{
     ConexionBD::DesconectarBD();
 
   }
-
+//se hace la consulta a la tabla para mostrar datos
   function mostrar_bono(){
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -30,6 +30,7 @@ class bono{
     return $result;
 
   }
+
 
 }
 

@@ -43,7 +43,7 @@ h1{
 
   text-align: center;
   padding-top: 25px;
-  color: red;
+	color: white;
 }
 
 /*se le da forma el formulario de bonos*/
@@ -58,7 +58,12 @@ h1{
 	width: 800px;
 	height: 100px;
 	margin-left: 250px;
-	color: white;
+}
+
+.tablabono{
+	margin-top: 40px;
+	margin-left: 33%;
+
 }
 /*aqui termina bono*/
 
@@ -94,5 +99,3 @@ h1{
   	width: 200px;
 }
 >>>>>>> origin/master
-
-

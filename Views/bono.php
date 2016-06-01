@@ -1,10 +1,15 @@
+<!--este es para que pueda mostrar los datos de esta tabla en internet.
+este es una conexion por haci desirlo-->
 <?php
 require_once("../Model/coneXion.php");
 require_once("../Model/bono.class.php");
 
+//este es para mostrar bono
 $bono= bono::mostrar_bono();
 
- ?>
+//este es para modificar bono
+//$intento= bono::modificar();
+?>
 
 
 <!--espacio del titulo titulo-->
@@ -39,33 +44,33 @@ $bono= bono::mostrar_bono();
     <!--este es el boton-->
     <button name="action" value="guardarbono">Guardar</button>
   </form>
+</div>
 
-
-<h2>informacion de bonos</h2>
-
-<table border="1px">
-  <thead>
-
-
-    <tr>
-      <td>codigo</td>
-      <td>codigo caterogia bonos</td>
-      <td>codigo punto</td>
-      <td>descripcion</td>
-      <td>cantidad</td>
-    </tr>
-  </thead>
-  <tbody>
-      <?php
-        foreach ($bono as $bn) {
-          echo "<tr>
-                  <td>".$bn["bono_cod"]."</td>
-                  <td>".$bn["cat_bono_cod"]."</td>
-                  <td>".$bn["pto_cod"]."</td>
-                  <td>".$bn["bono_desc"]."</td>
-                  <td>".$bn["bono_cant"]."</td>
-          </tr>";
-        }
-       ?>
-  </tbody>
-</table>
+<!--estes es el proceso pra que aparesca y se pueda mostrar-->
+<div class="tablabono">
+  <table border="1px">
+    <thead>
+      <th colspan="5">Informacion de bonos</th>
+      <tr>
+        <td>Codigo</td>
+        <td>Codigo caterogia bono</td>
+        <td>Codigo punto</td>
+        <td>Descripcion</td>
+        <td>Cantidad</td>
+      </tr>
+    </thead>
+    <tbody>
+        <?php
+          foreach ($bono as $bn) {
+            echo "<tr>
+                    <td>".$bn["bono_cod"]."</td>
+                    <td>".$bn["cat_bono_cod"]."</td>
+                    <td>".$bn["pto_cod"]."</td>
+                    <td>".$bn["bono_desc"]."</td>
+                    <td>".$bn["bono_cant"]."</td>
+            </tr>";
+          }
+         ?>
+    </tbody>
+  </table>
+</div>
