@@ -7,8 +7,8 @@ require_once("../model/ciudad.class.php");
 $ciudad = Gestion_Ciudad::cargardepartamento();
 
 ?>
-
-<div id="cuadrado">
+<meta charset="utf-8">
+<div id="cua">
 <h1 style="color:black">CIUDAD</h1>
 </div>
 <section>

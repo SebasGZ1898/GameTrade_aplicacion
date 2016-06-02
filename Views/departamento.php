@@ -6,7 +6,7 @@ require_once("../model/pais.class.php");
 $pais = Gestion_Pais::cargarpais();
 
 ?>
-
+<meta charset="utf-8">
 <div id="micuadro">
 <h1 style="color:white">DEPARTAMENTO</h1>
 </div>

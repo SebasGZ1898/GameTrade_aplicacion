@@ -29,7 +29,7 @@ class Gestion_Ciudad
 
 		ConexionBD::DesconectarBD();
 
-		return $result;
+		
 	}
 }
 

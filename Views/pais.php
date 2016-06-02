@@ -6,6 +6,7 @@ require_once("../model/pais.class.php");
 $pais = Gestion_Pais::cargarpais();
 
 ?>
+<meta charset="utf-8">
 <div id="cualid">
 <h1 style="color:black">PAIS</h1>
 </div>
