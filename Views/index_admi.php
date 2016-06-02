@@ -1,4 +1,11 @@
 <?php
+
+if (!isset($_SESSION['usu_nom']))	 {
+	header("Location:admin.php"); 
+}
+
+
+
 require_once("../Model/conexion.php");
 include("../Model/juego_admi.class.php");
 

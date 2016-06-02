@@ -7,11 +7,14 @@
 
 <div id="dvAdmin">
  <div id="dvNome">Administrador</div>
+
+ <form action="../Controller/validarAdmi_Controller.php" method="post">
 	<ul id="ulAdmin">
-		<li><label>Usuario</label><input/></li>
-		<li><label>Clave</label><input/></li>
-		<li><button>Enviar</button></li>
+		<li><label>Usuario</label><input type="text" name="txtUsuadmi" /></li>
+		<li><label>Clave</label><input type="password" name="txtClaveadmi"/></li>
+		<li><button name="Vadmi" value="c">Enviar</button></li>
 	</ul>
+</form>
 </div>
 
 </body>
