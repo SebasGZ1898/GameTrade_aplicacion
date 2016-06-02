@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (!isset($_SESSION['usu_nom']))	 {
 	header("Location:admin.php"); 
 }
@@ -33,7 +33,7 @@ $Mjuego=Gestion_Videojuego::mostrarjuego();
 <section id="stMain">
 	<div id="dvPhoto"></div>
 	<div id="dvWelcome">BIENVENIDO</div>
-	<div id="dvAdm">Sebastian</div>
+	<div id="dvAdm"><?php echo $_SESSION['usu_nom']; ?></div>
 </section>
 <section id="stA_User">
 usuario
