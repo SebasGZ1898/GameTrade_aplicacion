@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usu_nom']))	 {
-	header("Location:admin.php"); 
+	header("Location:admin.php");
 }
 
 
@@ -106,8 +106,8 @@ usuario
 					<li><button name="action" value="juego_admi">Enviar</button></li>
 					</ul>
 				</form>
-			</fieldset>	
-			
+			</fieldset>
+
 		</div>
 	</article>
 </section>
@@ -131,7 +131,7 @@ usuario
 
 <section id="stA_Bono">
 	<?php require("bono.php"); ?>
-</section> 
+</section>
 
 <section id="stA_Consola">
 	<?php require("admin_consola.php"); ?>

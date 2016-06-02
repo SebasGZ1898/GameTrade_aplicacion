@@ -5,6 +5,7 @@ require_once("../Model/bono.class.php");
 
 $accion=$_REQUEST["action"];
 switch ($accion) {
+
   case 'guardarbono':
 
 //en esta parte se guardan los datos en la variable guardarbono que esta encima
@@ -26,5 +27,22 @@ switch ($accion) {
 
       break;
 
-      
+      case 'modificar':
+        $cat_bono_cod=$_POST["cat_bono_cod"];
+        $pto_cod=$_POST["pto_cod"];
+        $bono_desc=$_POST["bono_desc"];
+        $bono_cant=$_POST["bono_cant"];
+        $bono_cod=$_POST["bono_cod"];
+
+        try {
+          bono::modificar($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant,$bono_cod);
+          echo "se ha modifico";
+          header("location:../Views/index_admi.php");
+        }
+        catch (Exception $e){
+            echo "Ocurrio un error".$e ;
+        }
+
+        break;
+}
  ?>

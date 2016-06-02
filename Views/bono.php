@@ -5,6 +5,8 @@ require_once("../Model/coneXion.php");
 require_once("../Model/bono.class.php");
 
 //este es para mostrar bono
+$cat_bono_cod=bono::mostrarCategoriabono();
+$pto_cod=bono::mostrarpunto();
 $bono= bono::mostrar_bono();
 
 //este es para modificar bono
@@ -13,6 +15,7 @@ $bono= bono::mostrar_bono();
 
 
 <!--espacio del titulo titulo-->
+<meta charset="utf-8">
 <div class="titulo_bono">
   <h1>Bono</h1>
 </div>
@@ -25,12 +28,32 @@ $bono= bono::mostrar_bono();
     <input type="text" name="bono_cod"/>
     </br>
     </br>
+
     <label>Código de categoria de bono: </label>
-    <input type="text" name="cat_bono_cod"/>
+
+    <select id="cat_bono_cod" name="cat_bono_cod" >
+      <?php
+        echo "<option>seleccione</option>";
+
+          foreach ($cat_bono_cod as $categoria) {
+            echo "<option value=".$categoria["cat_bono_cod"].">".$categoria["cat_bono_nom"]."</option>";
+        }
+
+       ?>
+     </select>
     </br>
     </br>
     <label>Codigo de punto: </label>
-    <input type="text" name="pto_cod"/>
+    <select id="pto_cod" name="pto_cod">
+      <?php
+        echo "<option>seleccione</option>";
+
+          foreach ($pto_cod as $puntos) {
+            echo "<option value=".$puntos["pto_cod"].">".$puntos["pto_moneda"]."</option>";
+        }
+
+       ?>
+     </select>
     </br>
     </br>
     <label>Descripción de bono:</label>
@@ -57,6 +80,7 @@ $bono= bono::mostrar_bono();
         <td>Codigo punto</td>
         <td>Descripcion</td>
         <td>Cantidad</td>
+        <td>modificar</td>
       </tr>
     </thead>
     <tbody>
@@ -68,6 +92,8 @@ $bono= bono::mostrar_bono();
                     <td>".$bn["pto_cod"]."</td>
                     <td>".$bn["bono_desc"]."</td>
                     <td>".$bn["bono_cant"]."</td>
+                    <td>
+                      <a href='modificarbono.php?codigo_bono=".$bn["bono_cod"]."'>modificar </td>
             </tr>";
           }
          ?>
