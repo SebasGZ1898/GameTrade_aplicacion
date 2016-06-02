@@ -109,6 +109,14 @@ usuario
 <?php require("Categoria_jue.php"); ?>
 </section>
 
+<section id="stA_Encuesta">
+<?php require("departamento.php"); ?>
+</section>
+
+<section id="stA_Sancion">
+<?php require("pais.php"); ?>
+</section>
+
 
 <section id="stA_Puntos">
 <?php require("puntos.php"); ?>
@@ -123,16 +131,12 @@ usuario
 </section>
 
 
-<section id="stA_Encuesta">
-encuesta
-</section>
 
-<section id="stA_Sancion">
-sancion
-</section>
+
+
 
 <section id="stA_Puntosjue">
-puntosjue
+<?php require("ciudad.php"); ?>
 </section>
 
 <section id="stA_Inform">

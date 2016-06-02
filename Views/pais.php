@@ -6,7 +6,7 @@ require_once("../model/pais.class.php");
 $pais = Gestion_Pais::cargarpais();
 
 ?>
-<div id="cua">
+<div id="cualid">
 <h1 style="color:black">PAIS</h1>
 </div>
 <section>
@@ -30,7 +30,7 @@ $pais = Gestion_Pais::cargarpais();
  
 
 
-		<label for="txtName">nombre del pais </label><input type="text" name="txtName" /><br><br>
+		
  
 
 		<button name="action" value="guardarciudad">enviar</button>

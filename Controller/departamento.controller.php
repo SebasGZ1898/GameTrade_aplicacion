@@ -5,7 +5,6 @@ require_once("../Model/departamento.class.php");
 $accion=$_REQUEST["action"];
  switch ($accion) {
  	case 'guardardepartamento':
- 		 
  		 $cod_departamento=$_POST["txtCodigo"];
  		 $departamento_nombre=$_POST["txtName"];
  		 $codigo_pais=$_POST["txtPais"];
@@ -23,4 +22,6 @@ $accion=$_REQUEST["action"];
  		# code...
  		break;
  }
+
+
 ?>
