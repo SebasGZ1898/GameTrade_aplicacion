@@ -193,3 +193,8 @@ function sbMenu(v_var){
 		break;
 	}
 }
+
+
+function destroy(){
+	$("#logn").load("destroySes.Controller.php");
+}

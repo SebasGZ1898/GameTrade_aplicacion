@@ -14,8 +14,9 @@ switch ($accion) {
 
 		try {
 			$result=Gestionar_admin::validarAdmi($usuario,$clave);
-
+			
 			$_SESSION['usu_nom'] =$result['usu_nom']; 
+			$_SESSION['photoUsu'] =$result['photo']; 
 			header("location:../Views/index_admi.php");
 		} catch (Exception $e) {
 			echo $e;

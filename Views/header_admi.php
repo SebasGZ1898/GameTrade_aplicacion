@@ -1,6 +1,6 @@
 <header>
 	<div id="dvLogo">aaaa</div>
-	<div id="logn">Cerrar session</div>
+	<div id="logn" onclick="destroy()">Cerrar session</div>
 </header>
 <ul id="ulMain">
 	<li onclick="sbMenu('Usuario')">Usuario</li>

@@ -4,8 +4,6 @@ if (!isset($_SESSION['usu_nom']))	 {
 	header("Location:admin.php");
 }
 
-
-
 require_once("../Model/conexion.php");
 include("../Model/juego_admi.class.php");
 
@@ -31,7 +29,7 @@ $Mjuego=Gestion_Videojuego::mostrarjuego();
 <?php include("header_admi.php");?>
 
 <section id="stMain">
-	<div id="dvPhoto"></div>
+	<div id="dvPhoto"><?php echo $_SESSION['photoUsu']; ?></div>
 	<div id="dvWelcome">BIENVENIDO</div>
 	<div id="dvAdm"><?php echo $_SESSION['usu_nom']; ?></div>
 </section>
