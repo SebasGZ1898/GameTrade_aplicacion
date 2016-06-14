@@ -15,7 +15,7 @@ $pais = Gestion_Pais::cargarpais();
 
 		<form action="../Controller/pais.controller.php" method="post">
 
-		<label for="txtCodigo">codigo del pais </label>
+		<label type="number" for="txtCodigo">codigo del pais </label>
 
 
 		<select name="txtCodigo">
