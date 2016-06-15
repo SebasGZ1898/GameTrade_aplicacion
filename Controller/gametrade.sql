@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-06-2016 a las 19:53:23
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Tiempo de generación: 15-06-2016 a las 23:17:49
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.5.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `gametrade`
@@ -23,27 +23,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbbl_usuario_x_pto`
---
-
-CREATE TABLE `tbbl_usuario_x_pto` (
-  `pto_cod` int(11) NOT NULL,
-  `usu_cod` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `tbl_auditoria`
 --
 
-CREATE TABLE `tbl_auditoria` (
+CREATE TABLE IF NOT EXISTS `tbl_auditoria` (
   `audi_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
   `audi_accion` varchar(200) COLLATE utf8_bin NOT NULL,
   `audi_fech` date NOT NULL,
   `audi_estado` int(1) NOT NULL,
-  `audi_desc` blob NOT NULL
+  `audi_desc` text COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_bono`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_bono` (
+  `bono_cod` int(11) NOT NULL,
+  `cat_bono_cod` int(11) NOT NULL,
+  `pto_cod` int(11) NOT NULL,
+  `bono_desc` int(11) NOT NULL,
+  `bono_cont` int(11) NOT NULL,
+  `bono_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -52,24 +56,25 @@ CREATE TABLE `tbl_auditoria` (
 -- Estructura de tabla para la tabla `tbl_categoria_bono`
 --
 
-CREATE TABLE `tbl_categoria_bono` (
+CREATE TABLE IF NOT EXISTS `tbl_categoria_bono` (
   `cat_bono_cod` int(11) NOT NULL,
   `cat_bono_nom` varchar(80) COLLATE utf8_bin NOT NULL,
-  `cat_bono_fech` date NOT NULL
+  `cat_bono_fech` date NOT NULL,
+  `cat_bono_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_categoria_jue`
+-- Estructura de tabla para la tabla `tbl_categoria_juego`
 --
 
-CREATE TABLE `tbl_categoria_jue` (
-  `cat_cod` int(11) NOT NULL,
-  `cat_nom` varchar(80) COLLATE utf8_bin NOT NULL,
-  `cat_desc` blob NOT NULL,
-  `cat_estado` int(1) NOT NULL,
-  `cat_fech` date NOT NULL
+CREATE TABLE IF NOT EXISTS `tbl_categoria_juego` (
+  `cat_jue_cod` int(11) NOT NULL,
+  `cat_jue_nom` varchar(80) COLLATE utf8_bin NOT NULL,
+  `cat_jue_desc` text COLLATE utf8_bin NOT NULL,
+  `cat_jue_estado` int(1) NOT NULL,
+  `cat_jue_fech` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -78,19 +83,11 @@ CREATE TABLE `tbl_categoria_jue` (
 -- Estructura de tabla para la tabla `tbl_ciudad`
 --
 
-CREATE TABLE `tbl_ciudad` (
+CREATE TABLE IF NOT EXISTS `tbl_ciudad` (
   `ciu_cod` int(11) NOT NULL,
   `ciu_nom` varchar(70) COLLATE utf8_bin NOT NULL,
   `depar_cod` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `tbl_ciudad`
---
-
-INSERT INTO `tbl_ciudad` (`ciu_cod`, `ciu_nom`, `depar_cod`) VALUES
-(501, 'medellin', 1),
-(502, 'barranquilla', 2);
 
 -- --------------------------------------------------------
 
@@ -98,12 +95,12 @@ INSERT INTO `tbl_ciudad` (`ciu_cod`, `ciu_nom`, `depar_cod`) VALUES
 -- Estructura de tabla para la tabla `tbl_comentario`
 --
 
-CREATE TABLE `tbl_comentario` (
+CREATE TABLE IF NOT EXISTS `tbl_comentario` (
   `coment_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
   `jue_cod` int(11) NOT NULL,
   `coment_asunt` varchar(255) COLLATE utf8_bin NOT NULL,
-  `comet_desc` blob NOT NULL,
+  `coment_desc` text COLLATE utf8_bin NOT NULL,
   `coment_fech` date NOT NULL,
   `coment_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -114,7 +111,7 @@ CREATE TABLE `tbl_comentario` (
 -- Estructura de tabla para la tabla `tbl_consola`
 --
 
-CREATE TABLE `tbl_consola` (
+CREATE TABLE IF NOT EXISTS `tbl_consola` (
   `cons_cod` int(11) NOT NULL,
   `cons_nom` varchar(20) COLLATE utf8_bin NOT NULL,
   `cons_estado` int(1) NOT NULL,
@@ -128,10 +125,10 @@ CREATE TABLE `tbl_consola` (
 -- Estructura de tabla para la tabla `tbl_consola_x_juego`
 --
 
-CREATE TABLE `tbl_consola_x_juego` (
+CREATE TABLE IF NOT EXISTS `tbl_consola_x_juego` (
   `jue_cod` int(11) NOT NULL,
   `cons_cod` int(11) NOT NULL,
-  `desc` blob NOT NULL
+  `jue_desc` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -140,19 +137,11 @@ CREATE TABLE `tbl_consola_x_juego` (
 -- Estructura de tabla para la tabla `tbl_departamento`
 --
 
-CREATE TABLE `tbl_departamento` (
+CREATE TABLE IF NOT EXISTS `tbl_departamento` (
   `depar_cod` int(11) NOT NULL,
   `depar_nom` varchar(100) COLLATE utf8_bin NOT NULL,
   `pais_cod` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `tbl_departamento`
---
-
-INSERT INTO `tbl_departamento` (`depar_cod`, `depar_nom`, `pais_cod`) VALUES
-(1, 'antioquia', 1),
-(2, 'atlantico', 1);
 
 -- --------------------------------------------------------
 
@@ -160,7 +149,7 @@ INSERT INTO `tbl_departamento` (`depar_cod`, `depar_nom`, `pais_cod`) VALUES
 -- Estructura de tabla para la tabla `tbl_encuesta`
 --
 
-CREATE TABLE `tbl_encuesta` (
+CREATE TABLE IF NOT EXISTS `tbl_encuesta` (
   `enc_cod` int(11) NOT NULL,
   `enc_nom` varchar(80) COLLATE utf8_bin NOT NULL,
   `enc_calif` int(11) NOT NULL,
@@ -171,13 +160,34 @@ CREATE TABLE `tbl_encuesta` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tbl_juego`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_juego` (
+  `jue_cod` int(11) NOT NULL,
+  `usu_cod` int(11) NOT NULL,
+  `jue_nom` varchar(80) COLLATE utf8_bin NOT NULL,
+  `cons_cod` int(11) NOT NULL,
+  `cat_jue_cod` int(11) NOT NULL,
+  `jue_desc` text COLLATE utf8_bin NOT NULL,
+  `jue_cant` int(11) NOT NULL,
+  `jue_trailer` text COLLATE utf8_bin NOT NULL,
+  `jue_fech_public` date NOT NULL,
+  `jue_imagen` varchar(100) COLLATE utf8_bin NOT NULL,
+  `jue_pal_clave` varchar(50) COLLATE utf8_bin NOT NULL,
+  `jue_estado` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tbl_noticia`
 --
 
-CREATE TABLE `tbl_noticia` (
+CREATE TABLE IF NOT EXISTS `tbl_noticia` (
   `noti_cod` int(11) NOT NULL,
   `noti_nom` varchar(80) COLLATE utf8_bin NOT NULL,
-  `noti_desc` blob NOT NULL,
+  `noti_desc` text COLLATE utf8_bin NOT NULL,
   `noti_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -187,10 +197,10 @@ CREATE TABLE `tbl_noticia` (
 -- Estructura de tabla para la tabla `tbl_pack_punto`
 --
 
-CREATE TABLE `tbl_pack_punto` (
+CREATE TABLE IF NOT EXISTS `tbl_pack_punto` (
   `pto_cod` int(11) NOT NULL,
   `pto_moneda` int(11) NOT NULL,
-  `pto_desc` blob NOT NULL
+  `pto_desc` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -199,17 +209,10 @@ CREATE TABLE `tbl_pack_punto` (
 -- Estructura de tabla para la tabla `tbl_pais`
 --
 
-CREATE TABLE `tbl_pais` (
+CREATE TABLE IF NOT EXISTS `tbl_pais` (
   `pais_cod` int(11) NOT NULL,
   `pais_nom` varchar(100) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `tbl_pais`
---
-
-INSERT INTO `tbl_pais` (`pais_cod`, `pais_nom`) VALUES
-(1, 'colombia');
 
 -- --------------------------------------------------------
 
@@ -217,7 +220,7 @@ INSERT INTO `tbl_pais` (`pais_cod`, `pais_nom`) VALUES
 -- Estructura de tabla para la tabla `tbl_ranking`
 --
 
-CREATE TABLE `tbl_ranking` (
+CREATE TABLE IF NOT EXISTS `tbl_ranking` (
   `rank_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
   `jue_cod` int(11) NOT NULL,
@@ -232,18 +235,19 @@ CREATE TABLE `tbl_ranking` (
 -- Estructura de tabla para la tabla `tbl_usuario`
 --
 
-CREATE TABLE `tbl_usuario` (
+CREATE TABLE IF NOT EXISTS `tbl_usuario` (
   `usu_cod` int(11) NOT NULL,
-  `usu_tip_docum` int(11) NOT NULL,
+  `usu_tip_docum` int(1) NOT NULL,
   `usu_num_docum` varchar(20) COLLATE utf8_bin NOT NULL,
+  `usu_photo` varchar(255) COLLATE utf8_bin NOT NULL,
   `usu_pass` varchar(30) COLLATE utf8_bin NOT NULL,
   `usu_nick` varchar(50) COLLATE utf8_bin NOT NULL,
   `usu_nom` varchar(80) COLLATE utf8_bin NOT NULL,
   `usu_apell` varchar(80) COLLATE utf8_bin NOT NULL,
   `rol_cod` int(11) NOT NULL,
   `usu_tel` int(11) NOT NULL,
-  `usu_naci` int(11) NOT NULL,
-  `usu_cel` int(11) NOT NULL,
+  `usu_naci` date NOT NULL,
+  `usu_cel` varchar(20) COLLATE utf8_bin NOT NULL,
   `usu_dir` varchar(100) COLLATE utf8_bin NOT NULL,
   `usu_mail` varchar(100) COLLATE utf8_bin NOT NULL,
   `ciu_cod` int(11) NOT NULL,
@@ -257,82 +261,50 @@ CREATE TABLE `tbl_usuario` (
 -- Estructura de tabla para la tabla `tbl_usuario_x_encuesta`
 --
 
-CREATE TABLE `tbl_usuario_x_encuesta` (
+CREATE TABLE IF NOT EXISTS `tbl_usuario_x_encuesta` (
   `usu_cod` int(11) NOT NULL,
   `enc_cod` int(11) NOT NULL,
-  `enc_des` blob NOT NULL
+  `enc_desc` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_usuario_x_videojuego`
+-- Estructura de tabla para la tabla `tbl_usuario_x_juego`
 --
 
-CREATE TABLE `tbl_usuario_x_videojuego` (
+CREATE TABLE IF NOT EXISTS `tbl_usuario_x_juego` (
   `usu_cod` int(11) NOT NULL,
   `jue_cod` int(11) NOT NULL,
-  `desc` varchar(255) COLLATE utf8_bin NOT NULL
+  `usu_jue_desc` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_videojuego`
+-- Estructura de tabla para la tabla `tbl_usuario_x_pto`
 --
 
-CREATE TABLE `tbl_videojuego` (
-  `jue_cod` int(11) NOT NULL,
-  `usu_cod` int(11) NOT NULL,
-  `jue_nom` varchar(100) COLLATE utf8_bin NOT NULL,
-  `cons_cod` int(11) NOT NULL,
-  `cat_cod` int(11) NOT NULL,
-  `jue_desc` blob NOT NULL,
-  `jue_cant` int(11) NOT NULL,
-  `jue_tailer` text COLLATE utf8_bin NOT NULL,
-  `jue_fech_public` date NOT NULL,
-  `jue_imagen` varchar(100) COLLATE utf8_bin NOT NULL,
-  `jue_pal_clave` varchar(50) COLLATE utf8_bin NOT NULL,
-  `jue_estado` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tb_bono`
---
-
-CREATE TABLE `tb_bono` (
-  `bono_cod` int(11) NOT NULL,
-  `cat_bono_cod` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_usuario_x_pto` (
   `pto_cod` int(11) NOT NULL,
-  `bono_desc` blob NOT NULL,
-  `bono_cant` int(11) NOT NULL
+  `usu_cod` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `tb_bono`
---
-
-INSERT INTO `tb_bono` (`bono_cod`, `cat_bono_cod`, `pto_cod`, `bono_desc`, `bono_cant`) VALUES
-(201, 1, 500, '', 5);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `tbbl_usuario_x_pto`
---
-ALTER TABLE `tbbl_usuario_x_pto`
-  ADD PRIMARY KEY (`pto_cod`,`usu_cod`);
-
---
 -- Indices de la tabla `tbl_auditoria`
 --
 ALTER TABLE `tbl_auditoria`
-  ADD PRIMARY KEY (`audi_cod`),
-  ADD KEY `usu_cod` (`usu_cod`);
+  ADD PRIMARY KEY (`audi_cod`);
+
+--
+-- Indices de la tabla `tbl_bono`
+--
+ALTER TABLE `tbl_bono`
+  ADD PRIMARY KEY (`bono_cod`), ADD KEY `cat_bono_cod` (`cat_bono_cod`), ADD KEY `pto_cod` (`pto_cod`);
 
 --
 -- Indices de la tabla `tbl_categoria_bono`
@@ -344,16 +316,13 @@ ALTER TABLE `tbl_categoria_bono`
 -- Indices de la tabla `tbl_ciudad`
 --
 ALTER TABLE `tbl_ciudad`
-  ADD PRIMARY KEY (`ciu_cod`),
-  ADD KEY `depar_cod` (`depar_cod`);
+  ADD PRIMARY KEY (`ciu_cod`), ADD KEY `depar_cod` (`depar_cod`);
 
 --
 -- Indices de la tabla `tbl_comentario`
 --
 ALTER TABLE `tbl_comentario`
-  ADD PRIMARY KEY (`coment_cod`),
-  ADD KEY `usu_cod` (`usu_cod`),
-  ADD KEY `jue_cod` (`jue_cod`);
+  ADD PRIMARY KEY (`coment_cod`);
 
 --
 -- Indices de la tabla `tbl_consola`
@@ -371,13 +340,19 @@ ALTER TABLE `tbl_consola_x_juego`
 -- Indices de la tabla `tbl_departamento`
 --
 ALTER TABLE `tbl_departamento`
-  ADD PRIMARY KEY (`depar_cod`);
+  ADD PRIMARY KEY (`depar_cod`), ADD KEY `pais_cod` (`pais_cod`);
 
 --
 -- Indices de la tabla `tbl_encuesta`
 --
 ALTER TABLE `tbl_encuesta`
   ADD PRIMARY KEY (`enc_cod`);
+
+--
+-- Indices de la tabla `tbl_juego`
+--
+ALTER TABLE `tbl_juego`
+  ADD KEY `usu_cod` (`usu_cod`), ADD KEY `cons_cod` (`cons_cod`), ADD KEY `cat_jue_cod` (`cat_jue_cod`);
 
 --
 -- Indices de la tabla `tbl_noticia`
@@ -407,28 +382,25 @@ ALTER TABLE `tbl_ranking`
 -- Indices de la tabla `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
-  ADD PRIMARY KEY (`usu_cod`);
+  ADD PRIMARY KEY (`usu_cod`), ADD KEY `rol_cod` (`rol_cod`), ADD KEY `usu_tip_docum` (`usu_tip_docum`);
 
 --
 -- Indices de la tabla `tbl_usuario_x_encuesta`
 --
 ALTER TABLE `tbl_usuario_x_encuesta`
-  ADD PRIMARY KEY (`enc_cod`,`usu_cod`);
+  ADD PRIMARY KEY (`usu_cod`,`enc_cod`);
 
 --
--- Indices de la tabla `tbl_usuario_x_videojuego`
+-- Indices de la tabla `tbl_usuario_x_juego`
 --
-ALTER TABLE `tbl_usuario_x_videojuego`
+ALTER TABLE `tbl_usuario_x_juego`
   ADD PRIMARY KEY (`usu_cod`,`jue_cod`);
 
 --
--- Indices de la tabla `tbl_videojuego`
+-- Indices de la tabla `tbl_usuario_x_pto`
 --
-ALTER TABLE `tbl_videojuego`
-  ADD PRIMARY KEY (`jue_cod`),
-  ADD UNIQUE KEY `cat_cod` (`cat_cod`),
-  ADD KEY `usu_cod` (`usu_cod`),
-  ADD KEY `cons_cod` (`cons_cod`);
+ALTER TABLE `tbl_usuario_x_pto`
+  ADD PRIMARY KEY (`pto_cod`,`usu_cod`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -439,6 +411,11 @@ ALTER TABLE `tbl_videojuego`
 --
 ALTER TABLE `tbl_auditoria`
   MODIFY `audi_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tbl_bono`
+--
+ALTER TABLE `tbl_bono`
+  MODIFY `bono_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_categoria_bono`
 --

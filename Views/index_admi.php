@@ -70,7 +70,7 @@ usuario
 				<legend>Agregar</legend>
 				<form action="../Controller/juego_admin.controller.php" method="post">
 					<ul id="ulAjuego">
-					<li><label>Cedula usuario</label><input type="text" name="txtUsuario" id="txtUsuario" disabled /></li>
+					<li><label>Cedula usuario</label><input type="number"  step="1" name="txtUsuario" id="txtUsuario" disabled /></li>
 					<li><label>Codigo Juego</label><input type="text" name="txtCodigo" id="txtCodigo" disabled /></li>
 					<li><label>Codigo Consola</label>
 						<select id="cbConsol" name="cbConsol" id="cbConsol" disabled>
