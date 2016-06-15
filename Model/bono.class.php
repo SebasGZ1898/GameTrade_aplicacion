@@ -18,7 +18,7 @@ class bono{
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="select * from tb_bono";
+    $sql="select * from tbl_bono";
 
     $query= $pdo->prepare($sql);
     $query->execute();

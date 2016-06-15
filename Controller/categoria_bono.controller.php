@@ -14,8 +14,7 @@ switch ($accion) {
   //se validan los datos, y le verificamos al usuario si esta guardado o no
   try {
     categoria_bono::guardar($cat_bono_nom,$cat_bono_fech);
-    echo "Guardado";
-
+    header("location:../Views/admin_categoria_bono.php");
   } catch (Exception $e) {
       echo "No guardo"+$e;
 
