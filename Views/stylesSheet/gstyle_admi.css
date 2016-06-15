@@ -12,6 +12,8 @@ header{
 	display: inline-block;
 }
 
+
+
 #logn{
 	display: inline-block;
 	float: right;
@@ -37,7 +39,30 @@ header{
 	padding-left: 50px;
 	padding-top: 15px;
 	cursor: pointer;
+	/*display:inline-block;
+	color:#fff;
+	vertical-align:top;
+	padding-left: 50px;
+	overflow:hidden;
+	cursor:pointer;
+	font-size: 19px;
+	font-weight: bolder;*/
 }
+
+#ul_main li ul {
+	position:absolute;
+	display:none;
+	background:#999;
+	width:150px; margin-top:10px;
+	z-index:999;
+	
+}
+
+#ul_main li:hover> ul {
+	display:block;
+	text-align:left;
+}
+
 
 #stMain{
 	width: 100%;

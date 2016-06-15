@@ -21,7 +21,7 @@ $Mjuego=Gestion_Videojuego::mostrarjuego();
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/gstyle_admi.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/estilo.css"/>
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/gmindex_admi.js"></script>
 
 </head>
@@ -32,6 +32,9 @@ $Mjuego=Gestion_Videojuego::mostrarjuego();
 	<div id="dvPhoto"><?php echo $_SESSION['photoUsu']; ?></div>
 	<div id="dvWelcome">BIENVENIDO</div>
 	<div id="dvAdm"><?php echo $_SESSION['usu_nom']; ?></div>
+
+
+
 </section>
 <section id="stA_User">
 usuario
@@ -110,39 +113,44 @@ usuario
 	</article>
 </section>
 
+<section id="stA_Consola">
+
+</section>
+
+
 <section id="stA_Categoria">
-<?php require("Categoria_jue.php"); ?>
-</section>
 
-<section id="stA_Encuesta">
-<?php require("departamento.php"); ?>
 </section>
-
-<section id="stA_Sancion">
-<?php require("pais.php"); ?>
-</section>
-
 
 <section id="stA_Puntos">
-<?php require("puntos.php"); ?>
+
 </section>
 
 <section id="stA_Bono">
-	<?php require("bono.php"); ?>
-</section>
 
-<section id="stA_Consola">
-	<?php require("admin_consola.php"); ?>
 </section>
 
 
 
+<section id="stA_Encuesta">
 
+</section>
+
+<section id="stA_Sancion">
+
+</section>
 
 
 <section id="stA_Puntosjue">
-<?php require("ciudad.php"); ?>
+
 </section>
+
+<section id="stA_nacionalidad">
+	<div id="dvPais">as</div>
+	<div id="dvDepartament">ad</div>
+	<div id="dvCiudad">asd</div>
+</section>
+
 
 <section id="stA_Inform">
 <h2>Todavia no se han creado los informes</h2>
