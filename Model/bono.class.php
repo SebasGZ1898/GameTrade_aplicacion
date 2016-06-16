@@ -5,7 +5,7 @@ class bono{
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="INSERT INTO tb_bono(bono_cod,cat_bono_cod,pto_cod,bono_desc,bono_cant) values(?,?,?,?,?)";
+    $sql="INSERT INTO tbl_bono(bono_cod,cat_bono_cod,pto_cod,bono_desc,bono_cant) values(?,?,?,?,?)";
 
     $query= $pdo->prepare($sql);
     $query->execute(array($bono_cod,$cat_bono_cod,$pto_cod,$bono_desc,$bono_cant));
@@ -22,7 +22,7 @@ class bono{
 
     $query= $pdo->prepare($sql);
     $query->execute();
-
+    
     $result= $query->fetchALL(PDO::FETCH_BOTH);
 
     ConexionBD::DesconectarBD();
