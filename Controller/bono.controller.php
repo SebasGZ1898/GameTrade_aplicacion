@@ -21,7 +21,7 @@ switch ($accion) {
     echo "Guardado";
 
   } catch (Exception $e) {
-    echo "No se guardo"+$e;
+    echo "No se guardo".$e;
 
   }
 

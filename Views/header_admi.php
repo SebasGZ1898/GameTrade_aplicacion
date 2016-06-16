@@ -4,9 +4,9 @@
 </header>
 <ul id="ulMain">
 	<li onclick="sbMenu('Usuario')" id="dvMusu">Usuario</li>
-	<li onclick="sbMenu('juegos')" id="dvMgame">Juegos</li>
 	<li onclick="sbMenu('consola')" id="dvMconsola">Consolas</li>
 	<li onclick="sbMenu('categoria')" id="dvMcategor">Categorias</li>
+	<li onclick="sbMenu('juegos')" id="dvMgame">Juegos</li>
 	<li onclick="sbMenu('punto')" id="dvMpuntos">Puntos</li>
 	<li onclick="sbMenu('bono')" id="dvMbono">Bono</li>
 	<!--<li>Otros
