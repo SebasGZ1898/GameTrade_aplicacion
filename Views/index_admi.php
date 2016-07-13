@@ -10,6 +10,15 @@ include("../Model/juego_admi.class.php");
 $Mconsol=Gestion_Videojuego::mostrarConsol();
 $Mcategoria=Gestion_Videojuego::mostrarCategoria();
 $Mjuego=Gestion_Videojuego::mostrarjuego();
+$MCjuego=Gestion_Videojuego::mostrarcodigojuego();
+
+
+if ($MCjuego[0]=="") {
+	$code="200";
+}else{
+	$code=$MCjuego["jue_cod"]+1;
+}
+
 
 ?>
 
@@ -70,8 +79,8 @@ usuario
 				<legend>Agregar</legend>
 				<form action="../Controller/juego_admin.controller.php" method="post">
 					<ul id="ulAjuego">
-					<li><label>Cedula usuario</label><input type="number"  maxlength="10" name="txtUsuario" id="txtUsuario" disabled /></li>
-					<li><label>Codigo Juego</label><input type="text" name="txtCodigo" id="txtCodigo" disabled /></li>
+					<li><label>Cedula usuario</label><input type="number" name="txtUsuario" id="txtUsuario" disabled /></li>
+					<li><label>Codigo Juego</label><input type="text"  name="txtCodigo" id="txtCodigo"  readonly="readonly" value="<?php echo $code; ?>"  disabled  /></li>
 					<li><label>Codigo Consola</label>
 						<select id="cbConsol" name="cbConsol" id="cbConsol" disabled>
 							<?php
@@ -90,7 +99,7 @@ usuario
 								echo "<option>Seleccionar</option>";
 
 								foreach ($Mcategoria as $categor) {
-									echo "<option value=".$categor["cat_cod"].">".$categor["cat_nom"]."</option>";
+									echo "<option value=".$categor["cat_jue_cod"].">".$categor["cat_jue_nom"]."</option>";
 								}
 
 							?>
@@ -98,10 +107,14 @@ usuario
 					</li>
 					<li><label>Nombre Videojuego</label><input type="text" id="txtName" name="txtName" disabled="disabled" /></li>
 					<li><label>Descripcion </label><input type="text" name="txtDetail" id="txtDetail" disabled="disabled" /></li>
-					<li><label>Cantidad</label><input type="text" name="txtCantidad" id="txtCantidad" disabled="disabled" /></li>
+					<li><label>Cantidad</label><input type="number" name="txtCantidad" id="txtCantidad" disabled="disabled" /></li>
 					<li><label>Imagen </label><input type="text" name="txtImagen" id="txtImagen" disabled="disabled" /></li>
 					<li><label>Trailer</label><input type="text" name="txtTrailer" id="txtTrailer" disabled="disabled" /></li>
-					<li><label>Estado</label><input type="text" name="txtEstado" id="txtEstado" disabled="disabled" /></li>
+					<li><label>Estado</label>
+						<select id="txtEstado" disabled>
+							<option value="0">Activo</option>
+							<option value="1">Inactivo</option>
+						</select></li>
 					<li><label>Fecha publicidad</label><input type="date" name="txtFecha" id="txtFecha" disabled="disabled" /></li>
 					<li><label>Palabras claves</label><input type="text" name="txtClaves" id="txtClaves" disabled="disabled" /></li>
 					<li><button name="action" value="juego_admi">Enviar</button></li>

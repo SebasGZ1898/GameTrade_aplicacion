@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2016 a las 00:06:14
+-- Tiempo de generación: 17-06-2016 a las 00:04:05
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -46,9 +46,16 @@ CREATE TABLE `tbl_bono` (
   `cat_bono_cod` int(11) NOT NULL,
   `pto_cod` int(11) NOT NULL,
   `bono_desc` int(11) NOT NULL,
-  `bono_cont` int(11) NOT NULL,
+  `bono_cant` int(11) NOT NULL,
   `bono_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `tbl_bono`
+--
+
+INSERT INTO `tbl_bono` (`bono_cod`, `cat_bono_cod`, `pto_cod`, `bono_desc`, `bono_cant`, `bono_estado`) VALUES
+(2147483647, 2, 0, 0, 32, 0);
 
 -- --------------------------------------------------------
 
@@ -63,6 +70,15 @@ CREATE TABLE `tbl_categoria_bono` (
   `cat_bono_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Volcado de datos para la tabla `tbl_categoria_bono`
+--
+
+INSERT INTO `tbl_categoria_bono` (`cat_bono_cod`, `cat_bono_nom`, `cat_bono_fech`, `cat_bono_estado`) VALUES
+(1, 'asdfasff', '2016-06-19', 0),
+(2, 'aaaaa', '2016-06-06', 0),
+(3, 'uuuuu', '2016-06-23', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -76,6 +92,13 @@ CREATE TABLE `tbl_categoria_juego` (
   `cat_jue_estado` int(1) NOT NULL,
   `cat_jue_fech` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `tbl_categoria_juego`
+--
+
+INSERT INTO `tbl_categoria_juego` (`cat_jue_cod`, `cat_jue_nom`, `cat_jue_desc`, `cat_jue_estado`, `cat_jue_fech`) VALUES
+(12312, 'dasdasd', 'asdasdasdasd', 1, '2016-06-28');
 
 -- --------------------------------------------------------
 
@@ -118,6 +141,14 @@ CREATE TABLE `tbl_consola` (
   `cons_refer` int(11) NOT NULL,
   `cons_imagen` varchar(50) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `tbl_consola`
+--
+
+INSERT INTO `tbl_consola` (`cons_cod`, `cons_nom`, `cons_estado`, `cons_refer`, `cons_imagen`) VALUES
+(200, 'play station', 1, 2, 'adasdsdsd'),
+(2147483647, 'xbox', 1, 360, '');
 
 -- --------------------------------------------------------
 
@@ -177,6 +208,15 @@ CREATE TABLE `tbl_juego` (
   `jue_pal_clave` varchar(50) COLLATE utf8_bin NOT NULL,
   `jue_estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `tbl_juego`
+--
+
+INSERT INTO `tbl_juego` (`jue_cod`, `usu_cod`, `jue_nom`, `cons_cod`, `cat_jue_cod`, `jue_desc`, `jue_cant`, `jue_trailer`, `jue_fech_public`, `jue_imagen`, `jue_pal_clave`, `jue_estado`) VALUES
+(200, 2, 'sdgsdfgfdgs', 200, 0, 'sdgdsfg', 34, 'adfas', '2016-06-23', 'afaf', 'asdfas', 1),
+(201, 5, 'sgdsfg', 200, 0, 'sfdgdsf', 23, 'safdsfa', '2016-06-15', 'asdfasf', 'asfasdf', 1),
+(202, 4, 'sgsdfgfds', 200, 0, 'sfgdf', 12, 'asfasdf', '2016-06-29', 'afasdf', 'adsad', 1);
 
 -- --------------------------------------------------------
 
@@ -363,6 +403,7 @@ ALTER TABLE `tbl_encuesta`
 -- Indices de la tabla `tbl_juego`
 --
 ALTER TABLE `tbl_juego`
+  ADD PRIMARY KEY (`jue_cod`),
   ADD KEY `usu_cod` (`usu_cod`),
   ADD KEY `cons_cod` (`cons_cod`),
   ADD KEY `cat_jue_cod` (`cat_jue_cod`);
@@ -430,12 +471,12 @@ ALTER TABLE `tbl_auditoria`
 -- AUTO_INCREMENT de la tabla `tbl_bono`
 --
 ALTER TABLE `tbl_bono`
-  MODIFY `bono_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `bono_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147483647;
 --
 -- AUTO_INCREMENT de la tabla `tbl_categoria_bono`
 --
 ALTER TABLE `tbl_categoria_bono`
-  MODIFY `cat_bono_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cat_bono_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tbl_comentario`
 --

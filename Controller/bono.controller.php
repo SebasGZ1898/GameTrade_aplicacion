@@ -21,6 +21,10 @@ switch ($accion) {
 
   } catch (Exception $e) {
     echo "No se guardo".$e;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
   }
 
       break;
