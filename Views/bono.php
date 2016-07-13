@@ -23,12 +23,7 @@ $bono= bono::mostrar_bono();
 <div class="formulario">
 <!--aqui esta el formato y de esta de esta forma se hace -->
   <form action="../Controller/bono.controller.php" method="post">
-
-    <label>Código: </label>
-    <input type="text" name="bono_cod"/>
-    </br>
-    </br>
-
+    <br>
     <label>Código de categoria de bono: </label>
 
     <select id="cat_bono_cod" name="cat_bono_cod" >

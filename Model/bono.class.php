@@ -1,14 +1,14 @@
 <!--aqui recojemos los datos y los llevamos a la base de datos-->
 <?php
 class bono{
-  function guardar($bono_cod,$cat_bono_cod,$pto_cod,$bono_desc,$bono_cant){
+  function guardar($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant){
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="INSERT INTO tbl_bono(bono_cod,cat_bono_cod,pto_cod,bono_desc,bono_cant) values(?,?,?,?,?)";
+    $sql="INSERT INTO tbl_bono(cat_bono_cod,pto_cod,bono_desc,bono_cant) values(?,?,?,?)";
 
     $query= $pdo->prepare($sql);
-    $query->execute(array($bono_cod,$cat_bono_cod,$pto_cod,$bono_desc,$bono_cant));
+    $query->execute(array($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant));
 
     ConexionBD::DesconectarBD();
 
@@ -22,7 +22,7 @@ class bono{
 
     $query= $pdo->prepare($sql);
     $query->execute();
-    
+
     $result= $query->fetchALL(PDO::FETCH_BOTH);
 
     ConexionBD::DesconectarBD();
@@ -35,7 +35,7 @@ class bono{
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="select * from tb_bono WHERE bono_cod=?";
+    $sql="select * from tbl_bono WHERE bono_cod=?";
 
     $query= $pdo->prepare($sql);
     $query->execute(array($codigo));
@@ -53,8 +53,8 @@ class bono{
     $pdo = ConexionBD::AbrirBD();
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $sql="UPDATE tb_bono SET cat_bono_cod= ? ,pto_cod= ?, bono_desc= ?, bono_cant= ? WHERE bono_cod= ?";
-
+    $sql="UPDATE tbl_bono SET cat_bono_cod= ? ,pto_cod= ?, bono_desc= ?, bono_cant= ? WHERE bono_cod= ?";
+    echo $sql;
     $query= $pdo->prepare($sql);
     $query->execute(array($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant,$bono_cod));
 

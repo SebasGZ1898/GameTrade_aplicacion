@@ -2,7 +2,7 @@
 require_once("../Model/coneXion.php");
 require_once("../Model/Categoria_bono.class.php");
 
-$bono= categoria_bono::mostrar_categoria_bono();
+$cat_bono= categoria_bono::mostrar_categoria_bono();
 
  ?>
 
@@ -44,7 +44,7 @@ $bono= categoria_bono::mostrar_categoria_bono();
 
   <tbody>
       <?php
-        foreach ($bono as $cb) {
+        foreach ($cat_bono as $cb) {
           echo "<tr>
                   <td>".$cb["cat_bono_cod"]."</td>
                   <td>".$cb["cat_bono_nom"]."</td>
