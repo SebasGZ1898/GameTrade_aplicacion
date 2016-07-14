@@ -4,12 +4,48 @@ header{
 	height: 150px;
 }
 
+#dv_main{
+	width: 100% !important;
+}
+
+#dvSlider{
+	width: 100%;
+	height: 522px;
+	background: url(../Imagen/slider.png);
+	overflow: hidden;
+	vertical-align: top;
+	margin-top: -16px;
+
+}
 #dvLogo{
 	background: url(../Imagen/logo.png);
-	width: 453px;
-	height: 98px;
+	width: 45%;
+	height: 84px;
 	display: inline-block;
 	margin-top: 25px;
+}
+#dvMenu{
+	width: 97%;
+	height: 130px;
+	background: #343434;
+	overflow: hidden;
+	vertical-align: top;
+	margin-top: -10px;
+	list-style: none;
+}
+
+#dvMenu li{
+	display: inline-block;
+	width: 25%;
+	height: 130px;
+	float: left;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+#code{
+	margin-left: -40px !important;
+	overflow: hidden;
 }
 
 #dvContel{
@@ -18,31 +54,104 @@ header{
 	float: right;
 }
 
-#login{
-	width: 80%;
-	height: 30px;
-	display: inline-block;
-	vertical-align: top;
+#code{
+	margin-left: -40px !important;
 	overflow: hidden;
-	float: right;
-	margin-right: 20px;
+	background: url(../Imagen/inicio.png) no-repeat;
+	width: 25%;
+	height: 130px;
+	overflow: hidden;
 }
 
-#login li{
-	display: inline-block;
+#liwor{
+	background: url(../Imagen/quienes_somos.png) no-repeat;
+	width: 25%;
+	height: 130px;
+}
+#licontact{
+	background: url(../Imagen/contactenos.png) no-repeat;
+	width: 25%;
+	height: 130px;
+	margin-top: 10px;
+}
+#liUsa{
+	background: url(../Imagen/comousa.png) no-repeat;
+	width: 25%;
+	height: 130px;
+}
+
+#invitLogin{
+	width: 62%;
+	height: 56px;
+	background: url(../Imagen/tira.png) no-repeat;
+	float: right;
+	color: #fff;
+	font-weight: bolder;
+	font-size: 22px;
+	margin-right: 1px;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#dvLogin{
+	width: 60%;
+	height: 35px;
+	float: right;
 	margin-right: 10px;
 }
+#Login{
+	width: 77%;
+	height: 30px;
+	list-style: none;
+	vertical-align: top;
+	overflow: hidden;
+	margin-top: 1px;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+#Login li{
+	display: inline-block;
+	overflow: hidden;
+	width: 45%;
+	height: 30px;
+	float: left;
+	margin-left: 10px;
+}
+
+#dvButonL{
+	display: inline-block;
+	width: 8%;
+	height:30px;
+	border:groove 1px;
+	border-radius: 5px;
+	height: 30px;
+	cursor: pointer;
+	background: url(../Imagen/btnIng.png) no-repeat;
+}
+
+#btnOpen{
+	border:none;
+}
+
+
 
 
 #ulRecord{
 	list-style: none;
 	float: right;
 	margin-right: 20px;
+	overflow: hidden;
+	margin-top: 5px;
+	font-weight: bolder;
 }
 
 #ulRecord li{
-	color: #39acdc;
+	color: #1c6fd0;
 	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 10px;
 
 }
 
@@ -65,23 +174,12 @@ header{
 	cursor: pointer;
 }
 
-#btnOpen{
-	border: groove 1px;
-	border-radius: 10px;
-	width: 80px;
-	height: 30px;
-	cursor: pointer;
-}
-
-#btnOpen:hover{
-	background: #39acdc;
-}
-
 input{
-	width: 100%;
+	width: 90%;
 	height: 20px;
 	border: groove 1px;
-	border-radius: 10px;
+	border-radius: 5px;
 	padding-left: 5px;
 	padding-top: 5px;
+	overflow: hidden;
 }
