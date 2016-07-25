@@ -54,7 +54,6 @@ class bono{
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
     $sql="UPDATE tbl_bono SET cat_bono_cod= ? ,pto_cod= ?, bono_desc= ?, bono_cant= ? WHERE bono_cod= ?";
-    echo $sql;
     $query= $pdo->prepare($sql);
     $query->execute(array($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant,$bono_cod));
 

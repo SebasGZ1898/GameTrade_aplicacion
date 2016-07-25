@@ -2,7 +2,7 @@
 
 //include("controllers/config.php");
 if(isset($_GET['url'])){
-	
+
 	$v_params=explode("/", $_GET['url']);
 	if(count($v_params)==1){$v_params[1]="0";}
 	if(count($v_params)==2){$v_params[2]="0";}
@@ -11,12 +11,12 @@ if(isset($_GET['url'])){
 }
 
 switch($v_params[0]){
-	
+
 	/*case "admin":
 		header("Location: http://appvirtualschool.com/views/admin.php?u=".$v_params[0]."&c=".$v_params[1]);
 		break;*/
 	case "index":
-		header("Location: http://localhost:8080/gametrade_aplicacion/Views/");
+		header("Location: http://localhost:8000/gametrade_aplicacion/Views/");
 		break;
 	/*case "institucional":
 		header("Location: http://appvirtualschool.com/views/institutional.php?u=".$v_params[0]."&c=".$v_params[1]);
@@ -24,8 +24,8 @@ switch($v_params[0]){
 	case "acudiente":
 		//header("Location: http://appvirtualschool.com/views/admin.php?u=".$v_params[0]."&c=".$v_params[1]);
 		break;
-		
-	
+
+
 }
 
 
