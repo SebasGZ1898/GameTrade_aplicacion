@@ -5,8 +5,8 @@
 		<div id="dvLogin">
 			<form action="../Controller/ValidarUsu.Controller.php" method="post">
 			<ul id="Login">
-				<li id="dvCode"><input type="text" placeholder="Correo Electronico" name="txtCode" id="txtCode"/></li>
-				<li><input type="password" placeholder="*************" name="txtName" id="txtName"/></li>
+				<li id="dvCode"><input type="text" placeholder="Nick" name="txtCode" id="txtCode" required="required"/></li>
+				<li><input type="password" placeholder="*************" name="txtName" id="txtName" required="required" /></li>
 			</ul>
 			<div id="dvButonL"><button  name="btnusu" id="btnOpen" value="ingresoUsu"></button></div>
 			</form>

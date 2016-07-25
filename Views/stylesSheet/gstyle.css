@@ -121,12 +121,17 @@ header{
 	border:groove 1px;
 	border-radius: 5px;
 	height: 30px;
-	cursor: pointer;
 	background: url(../Imagen/btnIng.png) no-repeat;
 }
 
+
 #btnOpen{
 	border:none;
+	width: 100%;
+	height:30px;
+	list-style: none;	
+	background: none;
+	cursor: pointer;
 }
 
 
