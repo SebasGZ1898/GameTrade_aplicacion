@@ -11,6 +11,7 @@
 	<?php require_once("header.php"); ?>
 	<div id="dvSlider"></div>
 	<div id="e64Video">
+		<iframe width="950" height="400" src="https://www.youtube.com/embed/pRQk4K-UbaU" frameborder="0" allowfullscreen></iframe>
 	</div>
 
 	<div id="e64ContePublic">
@@ -25,8 +26,10 @@
 	<li></li>
 	<li></li>
 	<li></li>
+	<li></li>
 </ul>
 <ul id="ulNoticJue">
+	<li></li>
 	<li></li>
 	<li></li>
 	<li></li>
@@ -36,7 +39,7 @@
 <div id="e64Noticia">noticias</div>
 
 <div id="e64ConteNoti">
-	<div id="e64Noticia1"></div>
+	<div id="e64Noticia1">aa</div>
 	<div id="e64SlideNoticia">Slider</div>
 </div>
 
