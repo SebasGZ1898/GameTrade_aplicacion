@@ -17,16 +17,12 @@ switch ($accion) {
   //se validan los datos, y le verificamos al usuario si esta guardado o no
   try {
     bono::guardar($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant);
-    echo "Guardado";
+    header("location:http://localhost:8000/gametrade_aplicacion/Views/index_admi.php");
 
-  } catch (Exception $e) {
+    }
+    catch (Exception $e) {
     echo "No se guardo".$e;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
-  }
-
+    }
       break;
 
       case 'modificar':
@@ -38,7 +34,7 @@ switch ($accion) {
 
         try {
           bono::modificar($cat_bono_cod,$pto_cod,$bono_desc,$bono_cant,$bono_cod);
-          echo "se ha modifico";
+          header("location:http://localhost:8000/gametrade_aplicacion/Views/index_admi.php");
         }
         catch (Exception $e){
             echo "Ocurrio un error".$e ;

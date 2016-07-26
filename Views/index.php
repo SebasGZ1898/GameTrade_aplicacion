@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<title>GAMETRADE</title>
+
 	<link rel="stylesheet" type="text/css" href="stylesSheet/gstyle.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesSheet/mindex.css"/>
 	<script type="text/javascript" src="hh"></script>
@@ -23,7 +24,7 @@
 <div id="e63JueDestac">VideosJuegos mas descatados</div>
 <ul id="ulNoticJue">
 	<li></li>
-	<li></li>
+	<li>sss</li>
 	<li></li>
 	<li></li>
 	<li></li>
