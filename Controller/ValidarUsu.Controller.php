@@ -3,18 +3,28 @@ include_once("../Model/conexion.php");
 include_once("../Model/validarUsu.class.php");
 
 $accion= $_POST["btnusu"];
-echo "aaaa";
+
 switch ($accion) {
 	case 'ingresoUsu':
-		echo "pasa";
+
 		$usuario=$_POST["txtCode"];
 		$clave=$_POST["txtName"];
-echo $clave;
+
 		try {
 			$result=Gestionar_Usu::validarUsu($usuario,$clave);
+			if ($result!="") {
 			
 			$_SESSION['usu_nom'] =$result['usu_nom']; 
-			//header("location:../Views/userperfil.php");
+			
+			header("location:../Views/userperfil.php");
+		
+			}else{
+				echo "<script languaje= 'Javascript'>alert('Datos invalidos')</script>";
+			exit();
+				header("location:../Views/index.php");
+			}
+		
+
 		} catch (Exception $e) {
 			echo $e;
 		}

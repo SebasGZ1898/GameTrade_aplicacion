@@ -21,7 +21,7 @@ header{
 }
 #dvMenu{
 	width: 97%;
-	height: 130px;
+	height: 90px;
 	background: #343434;
 	overflow: hidden;
 	vertical-align: top;
@@ -32,16 +32,13 @@ header{
 #dvMenu li{
 	display: inline-block;
 	width: 25%;
-	height: 130px;
+	height: 90px;
 	float: left;
 	margin-left: 3px;
 	cursor: pointer;
 }
 
-#code{
-	margin-left: -40px !important;
-	overflow: hidden;
-}
+
 
 #dvContel{
 	display: inline-block;
@@ -54,25 +51,25 @@ header{
 	overflow: hidden;
 	background: url(../Imagen/inicio.png) no-repeat;
 	width: 25%;
-	height: 130px;
+	height: 80px;
 	overflow: hidden;
 }
 
 #liwor{
 	background: url(../Imagen/quienes_somos.png) no-repeat;
 	width: 25%;
-	height: 130px;
+	height: 80px;
 }
 #licontact{
 	background: url(../Imagen/contactenos.png) no-repeat;
 	width: 25%;
-	height: 130px;
-	margin-top: 10px;
+	height: 80px;
+	margin-top: 5px;
 }
 #liUsa{
 	background: url(../Imagen/comousa.png) no-repeat;
 	width: 25%;
-	height: 130px;
+	height: 80px;
 }
 
 #invitLogin{

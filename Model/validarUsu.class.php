@@ -14,12 +14,13 @@ class Gestionar_Usu
 
 		$query= $pdo->prepare($sql);
 		$query->execute(array($usuario,$clave));
-echo $sql;
+
 		$result=$query->fetch(PDO::FETCH_BOTH);
+		
 
 		ConexionBD::DesconectarBD();
 
-		return $result;
+			return $result;
 	}
 }
 
