@@ -1,8 +1,8 @@
 $(document).ready(function() {
-//CargarSlider();
+CargarSlider();
 });
 
 function CargarSlider(){
 	$("#e64SlideNoticia").load("slider/with-jquery.html");
-	alert(4444444444);
+
 }

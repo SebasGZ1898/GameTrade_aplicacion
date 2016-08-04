@@ -19,10 +19,10 @@
 	</div>
 </header>
 <ul id="dvMenu">
-	<li id="code"></li>
-	<li id="liwor"></li>
-	<li id="licontact"></li>
-	<li id="liUsa"></li>
+	<li id="code" onclick="sb_menu('home')"></li>
+	<li id="liwor" onclick="sb_menu('wor')"></li>
+	<li id="licontact" onclick="sb_menu('contact')"></li>
+	<li id="liUsa" onclick="sb_menu('usa')"></li>
 </ul>
 <!--<nav>
 	<ul id="ulMenu">

@@ -19,8 +19,13 @@ switch ($accion) {
 			header("location:../Views/userperfil.php");
 		
 			}else{
+				$num=0;
 				echo "<script languaje= 'Javascript'>alert('Datos invalidos')</script>";
-			exit();
+				exit();
+			}
+
+			if ($num==0) {
+				echo "sssss";
 				header("location:../Views/index.php");
 			}
 		
