@@ -47,6 +47,7 @@
 			</figure>
 		</div>
 	</div>
+	<div class="clRy"></div>
 	<div id="e64Video">
 		<iframe width="950" height="400" src="https://www.youtube.com/embed/pRQk4K-UbaU" frameborder="0" allowfullscreen></iframe>
 	</div>
