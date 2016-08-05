@@ -1,5 +1,5 @@
 <header>
-	<div id="dvLogo"></div>
+	<div id="dvLogo" onclick="sb_menu('home')"></div>
 	<div id="dvContel">
 		<div id="invitLogin">Ingresa ya a nuestra pagina</div>
 		<div id="dvLogin">
@@ -13,8 +13,8 @@
 			</div>
 
 		<ul id="ulRecord">
-			<li>Olvide mi Contraseña</li>
-			<li>Registrate</li>
+			<li onclick="sb_menu('contrasena')">Olvide mi Contraseña</li>
+			<li onclick="sb_menu('regist')">Registrate</li>
 		</ul>
 	</div>
 </header>

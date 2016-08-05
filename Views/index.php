@@ -1,3 +1,16 @@
+<?php
+/*require_once("../Controller/ValidarUsu.Controller.php");
+
+$alert = bono::consultarporCodigo($_GET["codigo_bono"]);
+
+
+if (condition) {
+	# code...
+}*/
+
+?>
+
+
 <!DOCTYPE html>
 <head>
 	<title>GAMETRADE</title>

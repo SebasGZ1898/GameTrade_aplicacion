@@ -15,6 +15,14 @@ function sb_menu(vVar){
 		case "usa":
 			self.location.href="usa.php";
 		break;
+
+		case "contrasena":
+			//self.location.href="usa.php";
+		break;
+
+		case "regist":
+			self.location.href="registro.php";
+		break;
 	}
 }
 
