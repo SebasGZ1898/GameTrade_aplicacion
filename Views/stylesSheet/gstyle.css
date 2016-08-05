@@ -13,7 +13,7 @@ header{
 
 
 #dvLogo{
-	background: url(../Imagen/logo.png);
+	background: url(../Imagen/logo.png) no-repeat;
 	width: 45%;
 	height: 84px;
 	display: inline-block;
