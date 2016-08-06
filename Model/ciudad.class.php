@@ -31,6 +31,21 @@ class Gestion_Ciudad
 
 		
 	}
+
+	function cargarciudad(){
+		$pdo = ConexionBD::AbrirBD();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$sql= "SELECT * FROM tbl_ciudad";
+
+		$query= $pdo->prepare($sql);
+		$query->execute();
+		$result = $query ->fetchALL(PDO::FETCH_BOTH);
+
+		ConexionBD::DesconectarBD();
+
+		return $result;
+	}
 }
 
 ?>

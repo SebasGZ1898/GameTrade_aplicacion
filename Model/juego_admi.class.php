@@ -41,7 +41,7 @@ class Gestion_Videojuego
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "select * from tbl_categoria_juego";
+		$sql= "select * from tbl_categoria_jue";
 
 		$query= $pdo->prepare($sql);
 		$query->execute();
@@ -59,7 +59,7 @@ class Gestion_Videojuego
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "select * from tbl_juego";
+		$sql= "select * from tbl_videojuego";
 
 		$query= $pdo->prepare($sql);
 		$query->execute();
@@ -77,7 +77,7 @@ class Gestion_Videojuego
 		$pdo = ConexionBD::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sql= "select jue_cod from tbl_juego ORDER BY jue_cod desc";
+		$sql= "select jue_cod from tbl_videojuego ORDER BY jue_cod desc";
 
 		$query= $pdo->prepare($sql);
 		$query->execute();

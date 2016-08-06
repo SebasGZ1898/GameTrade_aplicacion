@@ -3,13 +3,15 @@
 	<div id="dvContel">
 		<div id="invitLogin">Ingresa ya a nuestra pagina</div>
 		<div id="dvLogin">
-			<form action="../Controller/ValidarUsu.Controller.php" method="post">
+
+			<div>
+
 			<ul id="Login">
 				<li id="dvCode"><input type="text" placeholder="Nick" name="txtCode" id="txtCode" required="required"/></li>
 				<li><input type="password" placeholder="*************" name="txtName" id="txtName" required="required" /></li>
 			</ul>
 			<div id="dvButonL"><button  name="btnusu" id="btnOpen" value="ingresoUsu"></button></div>
-			</form>
+			</div>
 			</div>
 
 		<ul id="ulRecord">

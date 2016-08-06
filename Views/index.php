@@ -1,16 +1,3 @@
-<?php
-/*require_once("../Controller/ValidarUsu.Controller.php");
-
-$alert = bono::consultarporCodigo($_GET["codigo_bono"]);
-
-
-if (condition) {
-	# code...
-}*/
-
-?>
-
-
 <!DOCTYPE html>
 <head>
 	<title>GAMETRADE</title>
@@ -60,7 +47,6 @@ if (condition) {
 			</figure>
 		</div>
 	</div>
-	<div class="clRy"></div>
 	<div id="e64Video">
 		<iframe width="950" height="400" src="https://www.youtube.com/embed/pRQk4K-UbaU" frameborder="0" allowfullscreen></iframe>
 	</div>
@@ -70,6 +56,34 @@ if (condition) {
 		<div id="e64Public2"></div>
 	</div>
 
+
+<div id="e63JueDestac">VideosJuegos mas descatados</div>
+<ul id="ulNoticJue">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<ul id="ulNoticJue">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<div id="e64Noticia">noticias</div>
+
+<div id="e64ConteNoti">
+	<div id="e64Noticia1"></div>
+	<div id="e64SlideNoticia">
+		
+</body>
+	</div>
+</div>
+
+<div id="e64Public3"></div>
 </div>
 
 </body>
