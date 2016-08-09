@@ -1,31 +1,32 @@
 <?php
 require_once("../Model/conexion.php");
-require_once("../Model/RegistroUsu.class.php");
+require_once("../Model/registroUsu.class.php");
 
-$accion=$_REQUEST["action"];
+$accion=$_POST["v_action"];
  switch ($accion) {
  	case 'AgregarUsuario':
- 		 
- 		 $cod_consola=$_POST["cbTipDocum"];
- 		 $cod_nombre=$_POST["numDocument"];
- 		 $cod_referencia=$_POST["nameRegist"];
- 		 $cod_estado=$_POST["lastRegist"];
- 		 $cod_imagen=$_POST["bornRegist"];
+ 		 $codigoRol=$_POST["codigoRol"];
+ 		 $estado=$_POST["estado"];
+ 		 $tipDocument=$_POST["tipDocument"];
+ 		 $numDocum=$_POST["numDocum"];
+ 		 $nombre=$_POST["nombre"];
 
- 		 $cod_imagen=$_POST["phoneRegist"];
- 		 $cod_imagen=$_POST["CelphoneRegist"];
- 		 $cod_imagen=$_POST["addressRegist"];
- 		 $cod_imagen=$_POST["cbCiudad"];
- 		 $cod_imagen=$_POST["emailRegist"];
+ 		 $apellido=$_POST["apellido"];
+ 		 $nacimiento=$_POST["nacimiento"];
+ 		 $telefono=$_POST["telefono"];
+ 		 $celphone=$_POST["celphone"];
+ 		 $direccion=$_POST["direccion"];
 
- 		 $cod_imagen=$_POST["nickRegist"];
- 		 $cod_imagen=$_POST["passRegist"];
- 		 $cod_imagen=$_POST["photoRegist"];
+ 		 $ciudad=$_POST["ciudad"];
+ 		 $correo=$_POST["correo"];
+ 		 $usuario=$_POST["usuario"];
 
+ 		 $contrasena=$_POST["contrasena"];
+ 		 $photo=$_POST["photo"];
 
  		 try {
- 		 	Gestion_Consola::Guardar($cod_consola,$cod_nombre,$cod_referencia,$cod_estado,$cod_imagen);
- 		 	echo "Guardar con exito";
+ 		 	registro_class::guardar($codigoRol,$estado,$tipDocument,$numDocum,$nombre,$apellido,$nacimiento,$telefono,$celphone,$direccion,$ciudad,$correo,$usuario,$contrasena,$photo);
+ 		 
  		 } catch (Exception $e) {
  		 	echo $e;
  		 }

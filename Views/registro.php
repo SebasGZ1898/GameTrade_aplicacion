@@ -4,7 +4,6 @@ include("../Model/ciudad.class.php");
 
 $ciudad=Gestion_Ciudad::cargarciudad();
 
-echo $ciudad;
 ?>
 
 
@@ -16,7 +15,9 @@ echo $ciudad;
 		<link rel="stylesheet" type="text/css" href="stylesSheet/registro.css"/>
 
 		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="js/connection.js"></script>
 		<script type="text/javascript" src="js/gweb.js"></script>
+		<script type="text/javascript" src="js/registro.js"></script>
 </head>
 <body>
 
@@ -26,22 +27,22 @@ echo $ciudad;
 	<form action="../Controller/registro.controller.php" method="post">
 		<ul id="ulContRegist">
 			<li><label for="">Tipo de documento</label>
-				<select name="cbTipDocum">
+				<select name="cbTipDocum" id="cbTipDocum">
 					<option value="0">Seleccionar</option>
 					<option value="1">Cedula de Ciudadania</option>
 					<option value="2">Tarjeta de Identidad</option>
 					<option value="3">Cedula de Estranjeria</option>
 				</select>
 			</li>
-			<li><label for="numDocument">Numero de Documento</label><input type="number" name="numDocument" required/></li>
-			<li><label for="">Nombre Completo</label><input type="text" name="nameRegist" required/></li>
-			<li><label for="">Apellido Completo</label><input type="text" name="lastRegist" required/></li>
-			<li><label for="">Fecha de nacimiento</label><input type="date" name="bornRegist" required/></li>
-			<li><label for="">Telefono</label><input type="number" name="phoneRegist"/></li>
-			<li><label for="">Celular</label><input type="number" name="CelphoneRegist"/></li>
-			<li><label for="">Direccion</label><input type="text" name="addressRegist" required/></li>
+			<li><label for="numDocument">Numero de Documento</label><input type="number" id="" name="numDocument" required/></li>
+			<li><label for="">Nombre Completo</label><input type="text" id="nameRegist"  name="nameRegist" required/></li>
+			<li><label for="">Apellido Completo</label><input type="text" id="lastRegist"  name="lastRegist" required/></li>
+			<li><label for="">Fecha de nacimiento</label><input type="date" id="bornRegist"  name="bornRegist" required/></li>
+			<li><label for="">Telefono</label><input type="number" id="phoneRegist"  name="phoneRegist"/></li>
+			<li><label for="">Celular</label><input type="number"  id="CelphoneRegist" name="CelphoneRegist"/></li>
+			<li><label for="">Direccion</label><input type="text" id="addressRegist"  name="addressRegist" required/></li>
 			<li><label for="">Ciudad</label>
-				<select name="cbCiudad">
+				<select  id="cbCiudad" name="cbCiudad">
 					<?php
 							echo "<option value='0'>Seleccionar</option>";
 						foreach ($ciudad as $ciu ) {
@@ -52,11 +53,12 @@ echo $ciudad;
 				</select>
 			</li>
 			
-			<li><label for="">Correo Electronico</label><input type="email" name="emailRegist" required/></li>
-			<li><label for="">Usuario</label><input type="text" name="nickRegist" required/></li>
-			<li><label for="">Contraseña</label><input type="password" name="passRegist" required/></li>
-			<li><label for="">Photo</label><input type="file" name="photoRegist"/></li>
-			<li><button name="action" value="AgregarUsuario">Guardar</button></li>
+			<li><label for="">Correo Electronico</label><input type="email" id="emailRegist"  name="emailRegist" required/></li>
+			<li><label for="">Usuario</label><input type="text" id="nickRegist"  name="nickRegist" required/></li>
+			<li><label for="">Contraseña</label><input type="password" id="passRegist"  name="passRegist" required/></li>
+			<li><label for="">Photo</label><input type="file" id="photoRegist"  name="photoRegist"/></li>
+			<!--<li><button name="action" value="AgregarUsuario">Guardar</button></li>-->
+			<li><div onclick="enviar()">enviar</div></li>
 		</ul>
 	</form>
 </div>

@@ -14,10 +14,10 @@
 <div id="dv_main">
 	<?php require_once("header.php"); ?>
 
-	<!--<div id="e64Monstrar">
+	<div id="e64Monstrar">
 		<div id="e64ClosPrinci">X</div>
 		<div id="e64ContePrinci"></div>
-	</div>-->
+	</div>
 
 
 

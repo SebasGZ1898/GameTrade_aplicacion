@@ -118,11 +118,12 @@
 	height:500px;
 	border:groove 1px;
 	border-radius: 5px;
-	z-index: 999px;
+	z-index: 1;
 	background: #f00;
 	position: absolute;
 	left: 100px;
 	top: 100px;
+	display: none;
 }
 #e64ClosPrinci{
 
